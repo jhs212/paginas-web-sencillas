@@ -1,831 +1,161 @@
-
 <!doctype html>
-<html lang="es-CO">
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0ea5e9" />
-
-  <!-- =========================
-       SEO (BÁSICO + TÉCNICO)
-  ========================== -->
-  <title>Páginas Web Sencillas y Funcionales | Web Simple & Pro</title>
-  <meta name="description" content="Diseño y desarrollo de páginas web rápidas y profesionales. Plan Básico (sin dominio ni hosting) y Plan Estándar (publicación + SEO). Botón de WhatsApp incluido." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://jhs212.github.io/paginas-web-sencillas/" />
-
-  <!-- Open Graph (WhatsApp/Facebook) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_CO" />
-  <meta property="og:title" content="Páginas Web Sencillas y Funcionales | Web Simple & Pro" />
-  <meta property="og:description" content="Plan Básico (sin dominio/hosting) y Plan Estándar (publicación + SEO). Web clara, rápida y con WhatsApp." />
-  <meta property="og:url" content="https://jhs212.github.io/paginas-web-sencillas/" />
-  <!-- Sube una imagen y descomenta:
-  <meta property="og:image" content="https://jhs212.github.io/paginas-web-sencillas/og-image.jpg" />
-  -->
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Páginas Web Sencillas y Funcionales | Web Simple & Pro" />
-  <meta name="twitter:description" content="Plan Básico vs Estándar. Página rápida, clara y lista para recibir contactos." />
-
-  <!-- Schema.org (SEO Avanzado) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Web Simple & Pro",
-    "url": "https://jhs212.github.io/paginas-web-sencillas/",
-    "areaServed": "CO",
-    "serviceType": "Diseño y desarrollo de páginas web",
-    "description": "Diseño y desarrollo de páginas web sencillas, rápidas y enfocadas en generar contactos. Plan Básico (sin dominio ni hosting) y Plan Estándar (publicación + SEO).",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "telephone": "+57-316-872-6521",
-      "availableLanguage": ["es"]
-    }
-  }
-  </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Páginas Web Sencillas y Funcionales</title>
+  <meta name="description" content="Creamos páginas web claras, útiles y económicas para personas y pequeños negocios. Diseño moderno, rápido y fácil de mantener.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f6f9ff;
-      --bg2:#ffffff;
+      --primary:#0ea5e9;
+      --primary-dark:#0284c7;
+      --accent:#22c55e;
+      --bg:#f8fafc;
       --text:#0f172a;
       --muted:#475569;
-      --line:#e2e8f0;
-      --blue:#0ea5e9;
-      --blue2:#0284c7;
-      --green:#16a34a;
-      --green2:#22c55e;
-      --orange:#fb923c;
-      --shadow: 0 18px 50px rgba(15, 23, 42, .12);
-      --radius: 18px;
-      --max: 1120px;
+      --card:#ffffff;
+      --shadow: 0 10px 25px rgba(2,132,199,.12);
+      --radius: 16px;
+      --container: 1120px;
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 450px at 15% -10%, rgba(14,165,233,.18), transparent 60%),
-        radial-gradient(900px 450px at 80% 0%, rgba(34,197,94,.10), transparent 60%),
-        var(--bg);
-      line-height:1.5;
-    }
-
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
-    .muted{color:var(--muted)}
-    .pill{
-      display:inline-flex;
-      padding:7px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.6);
-      font-size:13px;
-      color:var(--muted);
-      gap:8px;
-      align-items:center;
-    }
-    .dot{
-      width:8px;height:8px;border-radius:999px;background:var(--blue);
-      box-shadow:0 0 0 4px rgba(14,165,233,.12);
-    }
-
-    /* Header */
-    header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(246,249,255,.72);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 0;
-      gap:14px;
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      text-decoration:none;
-    }
-    .logo{
-      width:38px;height:38px;border-radius:12px;
-      background: linear-gradient(135deg, var(--blue), rgba(34,197,94,.95));
-      box-shadow: var(--shadow);
-    }
-    .brand-title{font-weight:900; letter-spacing:-.2px;}
-    .brand-sub{font-size:12px; color:var(--muted); margin-top:1px;}
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:6px;
-      padding:0;
-      margin:0;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    nav a{
-      display:inline-flex;
-      padding:9px 10px;
-      border-radius:12px;
-      text-decoration:none;
-      color:var(--muted);
-      border:1px solid transparent;
-    }
-    nav a:hover{
-      border-color:var(--line);
-      background:rgba(255,255,255,.6);
-      color:var(--text);
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      font-weight:800;
-      text-decoration:none;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.7);
-      color:var(--text);
-    }
-    .btn:hover{filter:brightness(1.02)}
-    .btn.primary{
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      color:#fff;
-      border-color:transparent;
-      box-shadow: 0 14px 35px rgba(14,165,233,.22);
-    }
-    .btn.success{
-      background: linear-gradient(135deg, var(--green), var(--green2));
-      color:#05210e;
-      border-color:transparent;
-      box-shadow: 0 14px 35px rgba(34,197,94,.20);
-    }
-
-    /* Hero */
-    .hero{padding:42px 0 22px;}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .hero-card{
-      background: rgba(255,255,255,.78);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    h1{
-      margin:10px 0 10px;
-      font-size: clamp(28px, 3.4vw, 44px);
-      letter-spacing:-.7px;
-      line-height:1.08;
-    }
-    .lead{margin:0 0 16px; font-size:16.5px;}
-    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 4px;}
-    .hero-badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
-    .list{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-    .list li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      padding:10px 10px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(246,249,255,.8);
-      color:var(--muted);
-    }
-    .check{
-      width:18px;height:18px;border-radius:6px;
-      background: rgba(34,197,94,.14);
-      border:1px solid rgba(34,197,94,.28);
-      position:relative;
-      flex:0 0 auto;
-      margin-top:2px;
-    }
-    .check:after{
-      content:"";
-      position:absolute;
-      width:8px;height:4px;
-      border-left:2px solid var(--green);
-      border-bottom:2px solid var(--green);
-      transform:rotate(-45deg);
-      left:4px; top:5px;
-    }
-
-    /* Sections */
-    section{padding:28px 0;}
-    .section-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom:14px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size: clamp(20px, 2.2vw, 28px);
-      letter-spacing:-.3px;
-    }
-    .section-title p{margin:0; max-width:70ch; color:var(--muted);}
-    .grid-2{display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px;}
-    .grid-3{display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px;}
-    .card{
-      background: rgba(255,255,255,.78);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .card h3{margin:0 0 8px; font-size:18px; letter-spacing:-.2px;}
-    .card p{margin:0; color:var(--muted);}
-    .card ul{margin:10px 0 0; padding-left:18px; color:var(--muted); display:grid; gap:8px;}
-
-    /* CTA strip */
-    .cta-strip{
-      margin:18px 0 0;
-      border-radius: var(--radius);
-      border:1px solid rgba(14,165,233,.22);
-      background: linear-gradient(135deg, rgba(14,165,233,.10), rgba(34,197,94,.08));
-      padding:16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .cta-strip strong{font-size:16px;}
-    .cta-strip .muted{margin:2px 0 0;}
-
-    /* Plans */
-    .plans-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:16px;
-      margin-top:14px;
-    }
-    .plan-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      margin-bottom:10px;
-    }
-    .tag{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      background: rgba(2,132,199,.10);
-      border:1px solid rgba(2,132,199,.18);
-      color: rgba(2,132,199,.95);
-      font-weight:800;
-      white-space:nowrap;
-    }
-    .tag.reco{
-      background: rgba(34,197,94,.14);
-      border:1px solid rgba(34,197,94,.22);
-      color: rgba(22,163,74,.95);
-    }
-    .warning{
-      margin-top:12px;
-      padding:12px;
-      border-radius:14px;
-      border:1px dashed rgba(251,146,60,.55);
-      background: rgba(251,146,60,.10);
-      color: var(--muted);
-    }
-    .plan-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
-
-    /* Compare table */
-    .compare{
-      margin-top:14px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      overflow:auto;
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow);
-    }
-    table{
-      width:100%;
-      border-collapse:collapse;
-      min-width: 760px;
-    }
-    th, td{
-      padding:12px;
-      border-bottom:1px solid var(--line);
-      vertical-align:top;
-      color:var(--muted);
-      font-size:14px;
-    }
-    th{
-      color:var(--text);
-      background: rgba(246,249,255,.85);
-      position:sticky;
-      top:0;
-      z-index:1;
-    }
-    td strong{color:var(--text);}
-    tr:last-child td{border-bottom:none}
-    .yes{color: var(--text); font-weight:800;}
-    .no{color: rgba(71,85,105,.85);}
-
-    /* FAQ */
-    details{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.78);
-      box-shadow: var(--shadow);
-      padding:14px 16px;
-    }
-    details + details{margin-top:12px;}
-    summary{cursor:pointer; font-weight:900; color:var(--text);}
-    details p{margin:10px 0 0; color:var(--muted);}
-
-    /* Footer */
-    footer{
-      padding:26px 0 40px;
-      border-top:1px solid var(--line);
-      color: rgba(71,85,105,.95);
-    }
-
-    /* WhatsApp floating */
-    .wa-fab{
-      position:fixed;
-      right:16px;
-      bottom:16px;
-      z-index:9999;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:900;
-      background: rgba(34,197,94,.92);
-      color:#05210e;
-      box-shadow: 0 18px 40px rgba(15,23,42,.22);
-    }
-    .wa-fab:hover{filter:brightness(1.03)}
-    .wa-icon{
-      width:18px;height:18px;border-radius:6px;
-      background: rgba(5,33,14,.18);
-      position:relative;
-      flex:0 0 auto;
-    }
-    .wa-icon:after{
-      content:"";
-      position:absolute;
-      width:10px;height:10px;
-      border:2px solid rgba(5,33,14,.35);
-      border-top:0;border-left:0;
-      transform:rotate(45deg);
-      left:3px; top:1px;
-    }
-    .wa-fab small{display:block; font-weight:800; opacity:.78; margin-top:-2px;}
-
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr;}
-      .grid-3{grid-template-columns:1fr;}
-      .grid-2{grid-template-columns:1fr;}
-      .plans-grid{grid-template-columns:1fr;}
-    }
-    @media (max-width: 860px){
-      nav ul{display:none;}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+    .topbar{background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:#fff;width:100%}
+    .header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+    .brand svg{width:42px;height:42px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}
+    .brand-title{font-weight:800;font-size:1.25rem}
+    .cta{background:#fff;color:var(--primary-dark);border:none;border-radius:999px;padding:10px 18px;font-weight:700;text-decoration:none;box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease}
+    .cta:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(2,132,199,.18)}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{color:#fff;text-decoration:none;opacity:.95}
+    .nav a:hover{opacity:1;text-decoration:underline}
+    .hero{padding:64px 0 32px}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:0 0 10px;font-weight:800}
+    .lead{color:var(--muted);font-size:1.05rem;margin:6px 0 0}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .pill{display:inline-block;background:rgba(255,255,255,.7);color:#0b2235;border-radius:999px;padding:6px 12px;font-weight:700;margin-bottom:12px}
+    section{padding:30px 0}
+    h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 12px}
+    p{margin:10px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .feature{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .list{margin:8px 0 0;padding:0 0 0 18px;color:var(--muted)}
+    .plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:12px}
+    .plan{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;position:relative;overflow:hidden}
+    .plan h3{margin:0 0 6px;font-size:1.25rem}
+    .badge{position:absolute;right:16px;top:16px;background:rgba(14,165,233,.12);color:var(--primary-dark);border:1px solid rgba(14,165,233,.3);padding:6px 10px;border-radius:999px;font-weight:700;font-size:.85rem}
+    .plan .price{font-size:1.1rem;color:var(--muted);margin:8px 0 12px}
+    .plan ul{margin:0;padding:0 0 0 18px;color:var(--muted)}
+    .plan .note{margin-top:10px;font-size:.95rem;color:#0b2235;background:#f1f5f9;border:1px dashed #cbd5e1;border-radius:12px;padding:10px 12px}
+    .plan .cta{display:inline-block;margin-top:14px}
+    .cta-banner{background:linear-gradient(90deg,rgba(14,165,233,.15),rgba(2,132,199,.15));border:1px solid rgba(2,132,199,.25);border-radius:var(--radius);padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+    .cta-banner strong{font-size:1.05rem}
+    footer{padding:32px 0 60px;color:#334155}
+    .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    .small{font-size:.9rem;color:#64748b}
+    .whatsapp-fab{position:fixed;right:18px;bottom:18px;z-index:9999;text-decoration:none;display:flex;align-items:center;gap:10px;background:var(--accent);color:#fff;padding:12px 16px;border-radius:999px;box-shadow:0 10px 20px rgba(0,0,0,.18);font-weight:800;transition:transform .15s ease, box-shadow .15s ease}
+    .whatsapp-fab:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.22)}
+    .whatsapp-fab svg{width:22px;height:22px;fill:#fff}
+    @media (max-width:900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .plans{grid-template-columns:1fr}
+      .whatsapp-fab span{display:none}
     }
   </style>
 </head>
-
 <body>
-  <!-- =========================
-       CONFIG RÁPIDA
-  ========================== -->
-  <script>
-    // Ajusta si necesitas
-    window.__CFG__ = {
-      BRAND: "Web Simple & Pro",
-      SITE_URL: "https://jhs212.github.io/paginas-web-sencillas/",
-      WHATSAPP_NUMBER: "573168726521" // +57 316 872 6521
-    };
-  </script>
-
-  <header>
-    <div class="wrap">
+  <div class="topbar">
+    <div class="container header">
+      <a class="brand" href="#inicio">
+        <svg viewBox="0 0 64 64"><rect x="4" y="8" rx="12" ry="12" width="56" height="48" fill="#fff"/><path d="M12 18h40v4H12zm0 10h26v4H12zm0 10h18v4H12z" fill="#0284c7"/></svg>
+        <span class="brand-title">Web Simple & Pro</span>
+      </a>
       <div class="nav">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <div class="logo" aria-hidden="true"></div>
-          <div>
-            <div class="brand-title">Web Simple &amp; Pro</div>
-            <div class="brand-sub">Páginas web que convierten</div>
-          </div>
-        </a>
-
-        <nav aria-label="Navegación principal">
-          <ul>
-            <li><a href="#que-es">¿Qué es?</a></li>
-            <li><a href="#incluye">Incluye</a></li>
-            <li><a href="#planes">Planes</a></li>
-            <li><a href="#para-quien">Para quién</a></li>
-            <li><a href="#por-que">¿Por qué elegirnos?</a></li>
-            <li><a href="#proceso">Proceso</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </nav>
-
-        <a class="btn primary" id="ctaTop" href="#" target="_blank" rel="noopener">
-          Hablar por WhatsApp
-        </a>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#incluye">Incluye</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#planes">Planes</a>
+        <a class="cta" href="https://wa.me/573168726521?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mi%20p%C3%A1gina%20web%20sencilla%20y%20funcional." target="_blank">Escríbenos</a>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main id="inicio" class="hero">
+  <main id="inicio" class="container hero">
     <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="hero-badges">
-            <span class="pill"><span class="dot"></span>Entrega rápida</span>
-            <span class="pill"><span class="dot"></span>Diseño responsive</span>
-            <span class="pill"><span class="dot"></span>SEO listo</span>
-          </div>
-
-          <h1>Presencia clara en internet, sin enredos ni costos altos.</h1>
-          <p class="lead muted">
-            Creamos sitios limpios, rápidos y pensados para que te encuentren, entiendan lo que ofreces y te contacten fácil.
-            Diseño profesional con foco en lo esencial.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#planes">Ver planes</a>
-            <a class="btn" href="#incluye">Qué incluye</a>
-          </div>
-
-          <div class="cta-strip">
-            <div>
-              <strong>¿Listo para empezar?</strong>
-              <div class="muted">Podemos tener tu página base en pocos días.</div>
-            </div>
-            <a class="btn success" id="ctaStrip" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Lo que obtienes">
-          <h2 style="margin:0 0 10px; letter-spacing:-.2px;">Lo que obtienes</h2>
-          <ul class="list">
-            <li><span class="check" aria-hidden="true"></span><div><b>Estructura clara</b><br><span class="muted">Inicio, servicios/actividades, sobre ti y contacto.</span></div></li>
-            <li><span class="check" aria-hidden="true"></span><div><b>Diseño moderno y adaptable</b><br><span class="muted">Se ve bien en celular y computador.</span></div></li>
-            <li><span class="check" aria-hidden="true"></span><div><b>Datos visibles + WhatsApp</b><br><span class="muted">Botón de WhatsApp incluido para contacto rápido.</span></div></li>
-            <li><span class="check" aria-hidden="true"></span><div><b>Textos optimizados</b><br><span class="muted">Edición básica y jerarquía de títulos.</span></div></li>
-            <li><span class="check" aria-hidden="true"></span><div><b>Velocidad y buenas prácticas</b><br><span class="muted">Mejor rendimiento y base SEO técnica (según plan).</span></div></li>
-          </ul>
-        </aside>
+      <div>
+        <span class="pill">Páginas Web Sencillas y Funcionales</span>
+        <h1 class="h1">Presencia clara en internet, sin enredos ni costos altos.</h1>
+        <p class="lead">Creamos sitios limpios, rápidos y pensados para que te encuentren, entiendan lo que ofreces y te contacten fácil. Diseño profesional con foco en lo esencial.</p>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Lo que obtienes</h2>
+        <ul class="list">
+          <li>Estructura clara: inicio, servicios/actividades, sobre ti y contacto.</li>
+          <li>Diseño moderno y adaptable (celular y computador).</li>
+          <li>Datos de contacto visibles + botón de WhatsApp.</li>
+          <li>Textos optimizados y edición básica de imágenes.</li>
+        </ul>
       </div>
     </div>
   </main>
 
-  <section id="que-es">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>¿Qué son las páginas web sencillas?</h2>
-        <p>Son sitios pensados para mostrar información clave de forma clara y directa: que entiendan lo que haces y te contacten sin perderse.</p>
+  <section id="planes" class="container">
+    <h2>Planes y Tipos de Página</h2>
+    <p>Ambas opciones incluyen diseño profesional y secciones básicas. Se diferencian en el dominio (dirección web) y el tipo de alojamiento (hosting).</p>
+    <div class="plans">
+      <div class="plan">
+        <span class="badge">La más económica</span>
+        <h3>Plan Económico — sin dominio ni hosting pago</h3>
+        <div class="price">Presencia online al menor costo.</div>
+        <ul>
+          <li>Alojamiento gratuito (GitHub Pages / Netlify).</li>
+          <li><strong>No</strong> pagas dominio ni hosting.</li>
+          <li>Dirección tipo: <code>tunegocio.github.io</code> o <code>tunegocio.netlify.app</code>.</li>
+          <li>Diseño responsive, secciones esenciales y WhatsApp.</li>
+        </ul>
+        <div class="note">Perfecto para empezar. Más adelante puedes migrar a dominio propio.</div>
+        <a class="cta" href="https://wa.me/573168726521?text=Hola%2C%20me%20interesa%20el%20Plan%20Econ%C3%B3mico%20(sin%20dominio%20ni%20hosting)." target="_blank">Quiero este plan</a>
       </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Claridad</h3>
-          <p>Textos directos, estructura simple y llamados a la acción visibles.</p>
-        </div>
-        <div class="card">
-          <h3>Funcionalidad</h3>
-          <p>Priorizamos lo esencial para evitar costos innecesarios y facilitar el mantenimiento.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="incluye">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>¿Qué incluye una página web sencilla y funcional?</h2>
-        <p>Incluye lo necesario para que tu negocio se muestre de manera profesional y efectiva en internet.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Propuesta clara + CTA</h3>
-          <p>Mensaje principal y botón para que te contacten.</p>
-        </div>
-        <div class="card">
-          <h3>Sección de servicios</h3>
-          <p>Descripciones breves, enfocadas en beneficios.</p>
-        </div>
-        <div class="card">
-          <h3>Contacto visible</h3>
-          <p>WhatsApp, teléfono, correo y ubicación (si aplica).</p>
-        </div>
+      <div class="plan">
+        <span class="badge">Recomendado</span>
+        <h3>Plan Estándar — con dominio y hosting propios</h3>
+        <div class="price">Imagen profesional y mayor control.</div>
+        <ul>
+          <li>Dominio propio: <code>www.tunegocio.com</code> o <code>.com.co</code>.</li>
+          <li>Hosting profesional y correos corporativos.</li>
+          <li>Mejor posicionamiento y escalabilidad.</li>
+        </ul>
+        <div class="note">Requiere pago anual de dominio y hosting. Te asesoramos para elegir proveedores confiables.</div>
+        <a class="cta" href="https://wa.me/573168726521?text=Hola%2C%20me%20interesa%20el%20Plan%20Est%C3%A1ndar%20(con%20dominio%20y%20hosting)." target="_blank">Quiero este plan</a>
       </div>
     </div>
   </section>
 
-  <!-- =========================
-       PLANES (BÁSICO vs ESTÁNDAR)
-  ========================== -->
-  <section id="planes">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>Planes</h2>
-        <p>Diferencia clara: <b>Básico</b> es entrega del sitio (sin dominio/hosting). <b>Estándar</b> incluye publicación + SEO técnico.</p>
+  <footer class="container">
+    <div class="foot">
+      <div class="brand" style="color:var(--text)">
+        <svg viewBox="0 0 64 64"><rect x="4" y="8" rx="12" ry="12" width="56" height="48" fill="#cbd5e1"/><path d="M12 18h40v4H12zm0 10h26v4H12zm0 10h18v4H12z" fill="#94a3b8"/></svg>
+        <span class="brand-title">Web Simple & Pro</span>
       </div>
-
-      <div class="plans-grid">
-        <!-- Plan Básico -->
-        <div class="card">
-          <div class="plan-head">
-            <h3 style="margin:0;">Plan Básico</h3>
-            <span class="tag">Entrega de archivos</span>
-          </div>
-
-          <p class="muted" style="margin:0 0 10px;">
-            Ideal si quieres empezar rápido con una web clara tipo landing.
-          </p>
-
-          <ul>
-            <li>1 página tipo landing (Inicio + Servicios + Sobre ti + Contacto)</li>
-            <li>Diseño responsive (celular y PC)</li>
-            <li>Botón de WhatsApp y enlaces a redes</li>
-            <li>SEO básico en contenido (títulos, estructura)</li>
-          </ul>
-
-          <div class="warning">
-            <b>Importante:</b> este plan es <b>SIN dominio ni hosting</b>.
-            Se entrega el sitio listo, pero no queda publicado automáticamente.
-          </div>
-
-          <div class="plan-actions">
-            <a class="btn primary" id="ctaBasic" href="#" target="_blank" rel="noopener">Quiero el Básico</a>
-            <a class="btn" href="#faq">¿Qué es hosting/dominio?</a>
-          </div>
-        </div>
-
-        <!-- Plan Estándar -->
-        <div class="card" style="border:1px solid rgba(34,197,94,.25); background: rgba(34,197,94,.07);">
-          <div class="plan-head">
-            <h3 style="margin:0;">Plan Estándar</h3>
-            <span class="tag reco">Recomendado</span>
-          </div>
-
-          <p class="muted" style="margin:0 0 10px;">
-            Ideal si quieres que quede <b>publicada</b> y lista para presentar profesionalmente.
-          </p>
-
-          <ul>
-            <li>Todo lo del Plan Básico</li>
-            <li>Publicación/activación (configuración incluida)</li>
-            <li><b>SEO técnico en HTML</b> (metas, OpenGraph, Schema)</li>
-            <li>Soporte inicial para ajustes post-entrega</li>
-          </ul>
-
-          <div class="plan-actions">
-            <a class="btn success" id="ctaStandard" href="#" target="_blank" rel="noopener">Quiero el Estándar</a>
-            <a class="btn" href="#proceso">Ver proceso</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="compare" aria-label="Tabla comparativa de planes">
-        <table>
-          <thead>
-            <tr>
-              <th>Característica</th>
-              <th>Plan Básico</th>
-              <th>Plan Estándar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Diseño responsive</strong></td>
-              <td class="yes">Sí</td>
-              <td class="yes">Sí</td>
-            </tr>
-            <tr>
-              <td><strong>Landing 1 página</strong></td>
-              <td class="yes">Sí</td>
-              <td class="yes">Sí</td>
-            </tr>
-            <tr>
-              <td><strong>Botón WhatsApp</strong></td>
-              <td class="yes">Sí</td>
-              <td class="yes">Sí</td>
-            </tr>
-            <tr>
-              <td><strong>Dominio</strong></td>
-              <td class="no">No incluido</td>
-              <td class="yes">Asesoría / configuración (según caso)</td>
-            </tr>
-            <tr>
-              <td><strong>Hosting</strong></td>
-              <td class="no">No incluido</td>
-              <td class="yes">Configuración / publicación incluida</td>
-            </tr>
-            <tr>
-              <td><strong>SEO técnico (metas/OG/Schema)</strong></td>
-              <td class="no">No</td>
-              <td class="yes">Sí</td>
-            </tr>
-            <tr>
-              <td><strong>Soporte post-entrega</strong></td>
-              <td class="no">Limitado</td>
-              <td class="yes">Incluido (inicial)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section id="para-quien">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>¿Para quién están pensadas?</h2>
-        <p>Para personas y pequeños negocios que necesitan presencia clara en internet sin procesos complejos ni altos costos.</p>
-      </div>
-
-      <div class="card">
-        <p class="muted" style="margin:0;">
-          Profesionales independientes, tiendas locales, emprendimientos, talleres, cursos, restaurantes, servicios a domicilio y más.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="por-que">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>¿Por qué elegir una página web sencilla y económica?</h2>
-        <p>Porque cumple su propósito con menos fricción: informa, genera confianza y facilita el contacto.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Ventajas clave</h3>
-          <ul>
-            <li>Navegación simple, textos claros y llamados a la acción visibles.</li>
-            <li>Carga rápida y buenas prácticas de SEO básico.</li>
-            <li>Escalable: se puede añadir blog, catálogo o agendamiento.</li>
-            <li>Soporte para mapas, formularios y enlaces a redes sociales.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Resultados esperados</h3>
-          <p class="muted">
-            Mejor presentación, más confianza y más probabilidad de que el visitante te escriba por WhatsApp o te llame.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proceso">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>¿Cómo es el proceso de elaboración?</h2>
-        <p>Simple, ordenado y rápido.</p>
-      </div>
-
-      <div class="card">
-        <ol class="muted" style="margin:0; padding-left:18px; display:grid; gap:8px;">
-          <li><b>Brief:</b> objetivos, servicios y estilo.</li>
-          <li><b>Contenido:</b> recibimos textos y fotos (o los preparamos).</li>
-          <li><b>Diseño:</b> maquetamos la versión inicial.</li>
-          <li><b>Ajustes:</b> revisas y pulimos detalles.</li>
-          <li><b>Publicación:</b> conectamos dominio y activamos (Plan Estándar).</li>
-        </ol>
-      </div>
-
-      <div class="cta-strip">
-        <div>
-          <strong>¿Te cotizo según tu negocio?</strong>
-          <div class="muted">Dime qué servicio ofreces y qué secciones necesitas.</div>
-        </div>
-        <a class="btn primary" id="ctaBottom" href="#" target="_blank" rel="noopener">Pedir cotización</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-title">
-        <h2>Preguntas frecuentes</h2>
-        <p>Aquí dejamos ultra claro lo del Plan Básico (sin dominio/hosting) y lo del SEO.</p>
-      </div>
-
-      <details>
-        <summary>¿Qué es un dominio y qué es hosting?</summary>
-        <p>
-          <b>Dominio</b> es el nombre de tu web (ej: <i>tumarca.com</i>).<br/>
-          <b>Hosting</b> es el “espacio” donde viven los archivos para que tu página se vea en internet.
-        </p>
-      </details>
-
-      <details>
-        <summary>En el Plan Básico, ¿qué entregan exactamente?</summary>
-        <p>
-          Te entregamos la página lista (archivos y diseño completo). <b>No incluye dominio ni hosting</b>,
-          por eso no queda publicada automáticamente. Si quieres que quede en línea, el Plan Estándar incluye la publicación/configuración.
-        </p>
-      </details>
-
-      <details>
-        <summary>¿Qué significa “SEO en el HTML”?</summary>
-        <p>
-          Que la web ya queda preparada para que Google la entienda mejor:
-          <b>título, descripción, estructura de encabezados</b> y (en Plan Estándar) metas técnicas como <b>OpenGraph</b> y <b>Schema</b>.
-          Esto no “garantiza” el puesto #1, pero deja la base correcta.
-        </p>
-      </details>
-
-      <details>
-        <summary>¿Puedo empezar con el Básico y luego pasar al Estándar?</summary>
-        <p>
-          Sí. Muchos empiezan con el Básico y luego añadimos publicación, SEO técnico y extras.
-        </p>
-      </details>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;">
-        <div>
-          <div style="font-weight:900; color:var(--text)">Web Simple &amp; Pro</div>
-          <div>© <span id="year"></span> — Todos los derechos reservados.</div>
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="#planes">Planes</a>
-          <a class="btn primary" id="ctaFooter" href="#" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-      </div>
+      <div class="small">© <span id="year"></span> Web Simple & Pro — Todos los derechos reservados.</div>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
-    <span class="wa-icon" aria-hidden="true"></span>
-    <div>
-      WhatsApp
-      <small>Respuesta rápida</small>
-    </div>
+  <a class="whatsapp-fab" href="https://wa.me/573168726521?text=Hola%2C%20vi%20su%20sitio%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%91%8B" target="_blank">
+    <svg viewBox="0 0 32 32"><path d="M19.11 17.13c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.45-.61-.45-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73 .34-.25 .27-.96 .94-.96 2.29s.98 2.66 1.12 2.85c.14 .18 1.93 2.94 4.67 4.12.65 .28 1.16 .45 1.56 .58.66 .21 1.26 .18 1.74 .11.53-.08 1.6-.65 1.83-1.29.23-.64.23-1.2.16-1.31-.07-.11-.25-.18-.52-.32zM16.03 28C9.94 28 5 23.06 5 16.97 5 10.89 9.94 6 16.03 6 22.11 6 27 10.89 27 16.97 27 23.06 22.11 28 16.03 28zm8.35-4.62C26.78 21.8 28 19.01 28 16.01 28 8.83 22.18 3 15 3S2 8.83 2 16.01C2 23.2 7.83 29 15.01 29c2.99 0 5.77-1.12 7.9-2.98L29 30l-4.62-6.62z"/></svg>
+    <span>WhatsApp</span>
   </a>
 
   <script>
-    // ====== WhatsApp links centralizados ======
-    const cfg = window.__CFG__ || {};
-    const phone = cfg.WHATSAPP_NUMBER || "573168726521";
-
-    const msgGeneral = encodeURIComponent("Hola, quiero información sobre la elaboración de mi página web.");
-    const msgBasic = encodeURIComponent("Hola, quiero el PLAN BÁSICO (sin dominio ni hosting). ¿Me cuentas valores y tiempos?");
-    const msgStandard = encodeURIComponent("Hola, quiero el PLAN ESTÁNDAR (publicación + SEO). ¿Me cuentas valores y qué necesitas de mí?");
-    const msgQuote = encodeURIComponent("Hola, quiero una cotización. Mi negocio es: ____ y necesito secciones: ____.");
-
-    const waGeneral = `https://wa.me/${phone}?text=${msgGeneral}`;
-    const waBasic = `https://wa.me/${phone}?text=${msgBasic}`;
-    const waStandard = `https://wa.me/${phone}?text=${msgStandard}`;
-    const waQuote = `https://wa.me/${phone}?text=${msgQuote}`;
-
-    // Botones
-    const setHref = (id, url) => { const el = document.getElementById(id); if(el) el.href = url; };
-
-    setHref("ctaTop", waGeneral);
-    setHref("ctaStrip", waGeneral);
-    setHref("ctaBasic", waBasic);
-    setHref("ctaStandard", waStandard);
-    setHref("ctaBottom", waQuote);
-    setHref("ctaFooter", waGeneral);
-    setHref("waFab", waGeneral);
-
-    // Año
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
