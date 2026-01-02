@@ -1,1 +1,119 @@
 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Páginas Web Sencillas y Funcionales</title>
+  <meta name="description" content="Creamos páginas web claras, útiles y económicas para personas y pequeños negocios. Diseño moderno, rápido y fácil de mantener.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --accent: #22c55e;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --shadow: 0 10px 25px rgba(2,132,199,.12);
+      --radius: 16px;
+      --container: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--container);margin:auto;padding:0 20px}
+    .topbar{background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:#fff;width:100%}
+    .header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand svg{width:40px;height:40px}
+    .brand-title{font-size:1.3rem;font-weight:800}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{color:#fff;font-weight:600}
+    .nav a:hover{text-decoration:underline}
+    .cta{background:#fff;color:var(--primary-dark);border-radius:999px;padding:8px 16px;font-weight:700;box-shadow:var(--shadow)}
+    .hero{padding:60px 0}
+    .hero h1{font-size:2.4rem;font-weight:800;margin:0 0 10px}
+    .lead{font-size:1.1rem;color:var(--muted)}
+    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    section{padding:40px 0}
+    h2{font-size:1.8rem;margin-bottom:12px}
+    .plans{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .plan{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;position:relative}
+    .plan h3{margin-top:0;font-size:1.4rem}
+    .price-tag{font-size:1.5rem;font-weight:800;color:var(--primary-dark);margin:8px 0}
+    .plan ul{padding-left:20px;color:var(--muted)}
+    .note{background:#f1f5f9;border:1px dashed #cbd5e1;padding:10px;border-radius:8px;font-size:.95rem;margin-top:10px}
+    footer{padding:30px 0;color:#64748b;font-size:.9rem;text-align:center}
+    .whatsapp-fab{position:fixed;bottom:18px;right:18px;background:var(--accent);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;display:flex;align-items:center;gap:10px;box-shadow:0 10px 20px rgba(0,0,0,.2)}
+    .whatsapp-fab svg{width:22px;height:22px;fill:#fff}
+    @media(max-width:900px){.plans{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container header">
+      <div class="brand">
+        <svg viewBox="0 0 64 64"><rect x="4" y="8" rx="12" ry="12" width="56" height="48" fill="#fff"/><path d="M12 18h40v4H12zm0 10h26v4H12zm0 10h18v4H12z" fill="#0284c7"/></svg>
+        <span class="brand-title">Web Simple & Pro</span>
+      </div>
+      <div class="nav">
+        <a href="#planes">Planes</a>
+        <a href="https://wa.me/573168726521?text=Hola,%20quiero%20una%20cotización" class="cta" target="_blank">Escríbenos</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container hero">
+    <h1>Páginas Web Sencillas y Funcionales</h1>
+    <p class="lead">Diseños modernos, rápidos y pensados para mostrar tu negocio de forma clara, profesional y accesible. Tú eliges entre una opción básica o una profesional con dominio propio.</p>
+  </main>
+
+  <section id="planes" class="container">
+    <h2>Planes y Precios</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>🟩 Plan Básico — Sin dominio ni hosting</h3>
+        <div class="price-tag">$350.000 COP</div>
+        <ul>
+          <li>Hosting gratuito (GitHub Pages / Netlify).</li>
+          <li>Dirección web tipo <code>tunegocio.github.io</code>.</li>
+          <li>Diseño responsive y optimizado.</li>
+          <li>Inicio, servicios, contacto y “sobre ti”.</li>
+          <li>Botón flotante de WhatsApp incluido.</li>
+        </ul>
+        <div class="note">Pago único. Sin costos mensuales ni anuales.</div>
+        <a href="https://wa.me/573168726521?text=Hola,%20quiero%20el%20Plan%20Básico%20de%20$350.000" class="cta" target="_blank">Solicitar Plan Básico</a>
+      </div>
+
+      <div class="plan">
+        <h3>💎 Plan Estándar — Con dominio y hosting</h3>
+        <div class="price-tag">$550.000 COP</div>
+        <ul>
+          <li>Dominio propio (.com o .com.co).</li>
+          <li>Hosting profesional y correos corporativos.</li>
+          <li>Diseño completo y escalable.</li>
+          <li>Optimización SEO básica y velocidad mejorada.</li>
+          <li>Soporte y configuración incluidos.</li>
+        </ul>
+        <div class="note">Incluye desarrollo, dominio y hosting por 1 año.</div>
+        <a href="https://wa.me/573168726521?text=Hola,%20quiero%20el%20Plan%20Estándar%20de%20$550.000" class="cta" target="_blank">Solicitar Plan Estándar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Web Simple & Pro — Todos los derechos reservados.
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/573168726521?text=Hola,%20me%20gustaría%20información%20sobre%20páginas%20web" target="_blank">
+    <svg viewBox="0 0 32 32"><path d="M19.11 17.13c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.45-.61-.45-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73 .34-.25 .27-.96 .94-.96 2.29s.98 2.66 1.12 2.85c.14 .18 1.93 2.94 4.67 4.12.65 .28 1.16 .45 1.56 .58.66 .21 1.26 .18 1.74 .11.53-.08 1.6-.65 1.83-1.29.23-.64.23-1.2.16-1.31-.07-.11-.25-.18-.52-.32z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
