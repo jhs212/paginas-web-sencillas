@@ -1,66 +1,247 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Páginas Web Sencillas y Funcionales</title>
+  <meta name="description" content="Creamos páginas web claras, útiles y económicas para personas y pequeños negocios. Diseño moderno, rápido y fácil de mantener.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0ea5e9;    /* Celeste */
+      --primary-dark:#0284c7;
+      --accent:#22c55e;     /* Verde */
+      --bg:#f8fafc;         /* Gris muy claro */
+      --text:#0f172a;       /* Slate-900 */
+      --muted:#475569;      /* Slate-600 */
+      --card:#ffffff;
+      --shadow: 0 10px 25px rgba(2,132,199,.12);
+      --radius: 16px;
+      --container: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-    <!-- TITLE SEO -->
-    <title>Páginas Web Sencillas y Económicas para Negocios Pequeños</title>
+    /* Header band (full width color, content centered) */
+    .topbar{
+      background:linear-gradient(90deg,var(--primary) 0%, var(--primary-dark) 100%);
+      color:#fff;
+      width:100%;
+    }
+    .header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:18px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+    .brand svg{width:42px;height:42px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}
+    .brand-title{font-weight:800;font-size:1.25rem;letter-spacing:.3px}
+    .cta{
+      background:#fff;color:var(--primary-dark);border:none;border-radius:999px;
+      padding:10px 18px;font-weight:700;text-decoration:none;box-shadow:var(--shadow);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .cta:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(2,132,199,.18)}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{color:#fff;text-decoration:none;opacity:.95}
+    .nav a:hover{opacity:1;text-decoration:underline}
 
-    <!-- META DESCRIPTION -->
-    <meta name="description" content="Diseñamos páginas web sencillas y económicas para pequeños negocios y emprendedores que necesitan presencia en internet sin complicaciones ni costos innecesarios.">
+    /* Hero */
+    .hero{padding:64px 0 32px}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:0 0 10px;font-weight:800}
+    .lead{color:var(--muted);font-size:1.05rem;margin:6px 0 0}
+    .card{
+      background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)
+    }
+    .pill{display:inline-block;background:rgba(255,255,255,.7);color:#0b2235;border-radius:999px;padding:6px 12px;font-weight:700;margin-bottom:12px}
 
-    <!-- SEO BÁSICO -->
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jhs212.github.io/paginas-web-sencillas/">
+    /* Sections */
+    section{padding:30px 0}
+    h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 12px}
+    p{margin:10px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .feature{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .list{margin:8px 0 0;padding:0 0 0 18px;color:var(--muted)}
 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="styles.css">
+    /* CTA Banner */
+    .cta-banner{
+      background:linear-gradient(90deg,rgba(14,165,233,.15),rgba(2,132,199,.15));
+      border:1px solid rgba(2,132,199,.25);
+      border-radius:var(--radius);
+      padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between
+    }
+    .cta-banner strong{font-size:1.05rem}
+
+    /* Footer */
+    footer{padding:32px 0 60px;color:#334155}
+    .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    .small{font-size:.9rem;color:#64748b}
+
+    /* Floating WhatsApp */
+    .whatsapp-fab{
+      position:fixed;right:18px;bottom:18px;z-index:9999;text-decoration:none;
+      display:flex;align-items:center;gap:10px;background:var(--accent);color:#fff;
+      padding:12px 16px;border-radius:999px;box-shadow:0 10px 20px rgba(0,0,0,.18);
+      font-weight:800;transition:transform .15s ease, box-shadow .15s ease
+    }
+    .whatsapp-fab:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(0,0,0,.22)}
+    .whatsapp-fab svg{width:22px;height:22px;fill:#fff}
+    @media (max-width:900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .whatsapp-fab span{display:none}
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Páginas Web Sencillas y Funcionales</h1>
-    <p>
-        Creamos páginas web sencillas y funcionales para personas y pequeños negocios
-        que necesitan una presencia clara en internet sin procesos complejos ni costos elevados.
-        Nos enfocamos en lo esencial: que tu página sea clara, útil y fácil de mantener.
-    </p>
-</header>
+  <!-- Top colored band with logo that NEVER narrows (full width background), content centered -->
+  <div class="topbar">
+    <div class="container header">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <!-- Simple generated logo (SVG). Replace with your image if you wish -->
+        <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#dff7ff" stop-opacity=".9"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="8" rx="12" ry="12" width="56" height="48" fill="url(#g)"/>
+          <path d="M12 18h40v4H12zm0 10h26v4H12zm0 10h18v4H12z" fill="url(#g)"/>
+        </svg>
+        <span class="brand-title">Web Simple & Pro</span>
+      </a>
+      <div class="nav">
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#incluye">Incluye</a>
+        <a href="#para-quien">Para quién</a>
+        <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#proceso">Proceso</a>
+        <a class="cta" href="https://wa.me/573168726521?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mi%20p%C3%A1gina%20web%20sencilla%20y%20funcional." target="_blank" rel="noopener">Escríbenos</a>
+      </div>
+    </div>
+  </div>
 
-<main>
-    <h2>¿Qué son las páginas web sencillas?</h2>
-    <p>
-        Las páginas web sencillas son sitios diseñados para mostrar información clara y directa
-        sobre un negocio, servicio o actividad. Están pensadas para cumplir una función específica:
-        permitir que las personas encuentren información básica, conozcan qué se ofrece y puedan
-        contactar fácilmente.
-    </p>
-    <p>
-        Este tipo de páginas prioriza la claridad, la facilidad de uso y la funcionalidad,
-        evitando elementos innecesarios que encarecen el desarrollo o complican el mantenimiento.
-    </p>
-<h2>¿Qué incluye una página web sencilla y funcional?</h2>
-<p>
-Una página web sencilla y funcional incluye los elementos básicos necesarios
-para que un negocio o servicio pueda mostrarse de forma clara en internet
-y permitir que las personas interesadas puedan contactarlo fácilmente.
-</p>
-<p>
-Generalmente incluye una página principal con la información esencial,
-una sección de servicios o actividades, datos de contacto visibles
-y un diseño claro que se pueda ver correctamente tanto en computador
-como en celular.
-</p>
-<p>
-Estas páginas están pensadas para ser fáciles de entender y mantener,
-sin funciones innecesarias que aumenten el costo o compliquen su uso.
-La idea es que la página cumpla su propósito: informar, generar confianza
-y facilitar el contacto.
-</p>
+  <main id="inicio" class="container hero">
+    <div class="wrap">
+      <div>
+        <span class="pill">Páginas Web Sencillas y Funcionales</span>
+        <h1 class="h1">Presencia clara en internet, sin enredos ni costos altos.</h1>
+        <p class="lead">Creamos sitios limpios, rápidos y pensados para que te encuentren, entiendan lo que ofreces y te contacten fácil. Diseño profesional con foco en lo esencial.</p>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Lo que obtienes</h2>
+        <ul class="list">
+          <li>Estructura clara: inicio, servicios/actividades, sobre ti y contacto.</li>
+          <li>Diseño moderno y adaptable (se ve bien en celular y computador).</li>
+          <li>Datos de contacto visibles + botón de WhatsApp.</li>
+          <li>Textos optimizados y edición básica de imágenes.</li>
+          <li>Velocidad y seguridad mejoradas (buenas prácticas).</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-</main>
+  <section id="que-es" class="container">
+    <div class="grid-2">
+      <div class="feature">
+        <h2>¿Qué son las páginas web sencillas?</h2>
+        <p>Son sitios pensados para mostrar información clave de un negocio, servicio o actividad de forma clara y directa. Su objetivo principal es que las personas entiendan qué ofreces y puedan contactarte sin perderse.</p>
+        <p>Priorizan <strong>claridad, facilidad de uso y funcionalidad</strong>, evitando elementos innecesarios que encarecen el desarrollo o dificultan el mantenimiento.</p>
+      </div>
+      <div class="feature">
+        <h2>¿Qué incluye una página web sencilla y funcional?</h2>
+        <p>Incluye lo necesario para que tu negocio se muestre de manera profesional y efectiva en internet:</p>
+        <ul class="list">
+          <li>Página principal con propuesta clara y llamada a la acción.</li>
+          <li>Sección de servicios o actividades con descripciones breves.</li>
+          <li>Sección “Sobre nosotros/ti” para generar confianza.</li>
+          <li>Contacto visible (WhatsApp, teléfono, correo, ubicación).</li>
+          <li>Diseño responsive y accesible.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <section id="para-quien" class="container">
+    <div class="grid-2">
+      <div class="feature">
+        <h2>¿Para quién están pensadas?</h2>
+        <p>Para personas y pequeños negocios que necesitan una presencia clara en internet sin procesos complejos ni altos costos: profesionales independientes, tiendas locales, emprendimientos, talleres, cursos, restaurantes, servicios a domicilio y más.</p>
+      </div>
+      <div class="feature">
+        <h2>¿Por qué elegir una página web sencilla y económica?</h2>
+        <p>Porque cumple su propósito con menos fricción: informa, genera confianza y facilita el contacto. Además, es más fácil de mantener y escalar cuando tu negocio crece.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="incluye" class="container">
+    <div class="feature">
+      <div class="cta-banner">
+        <strong>¿Listo para empezar? Podemos tener tu página base en pocos días.</strong>
+        <a class="cta" href="https://wa.me/573168726521?text=Hola%2C%20quiero%20empezar%20mi%20p%C3%A1gina%20web." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que" class="container">
+    <div class="grid-2">
+      <div class="feature">
+        <h2>Ventajas clave</h2>
+        <ul class="list">
+          <li>Navegación simple, textos claros y llamados a la acción visibles.</li>
+          <li>Carga rápida y buenas prácticas de SEO básico.</li>
+          <li>Escalable: podemos añadir luego blog, catálogo o agendamiento.</li>
+          <li>Soporte para mapas, formularios y enlaces a redes sociales.</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <h2>¿Cómo es el proceso de elaboración?</h2>
+        <ol class="list">
+          <li><strong>Brief:</strong> objetivos, servicios y estilo.</li>
+          <li><strong>Contenido:</strong> recibimos textos y fotos (o los preparamos).</li>
+          <li><strong>Diseño:</strong> maquetamos la versión inicial.</li>
+          <li><strong>Ajustes:</strong> revisas y pulimos detalles.</li>
+          <li><strong>Publicación:</strong> conectamos dominio y activamos.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="foot">
+      <div class="brand" style="color:var(--text)">
+        <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1">
+              <stop offset="0" stop-color="#0ea5e9" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#0284c7" stop-opacity=".25"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="8" rx="12" ry="12" width="56" height="48" fill="url(#g2)"/>
+          <path d="M12 18h40v4H12zm0 10h26v4H12zm0 10h18v4H12z" fill="url(#g2)"/>
+        </svg>
+        <span class="brand-title" style="color:inherit">Web Simple & Pro</span>
+      </div>
+      <div class="small">© <span id="year"></span> Web Simple & Pro — Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="whatsapp-fab" href="https://wa.me/573168726521?text=Hola%2C%20vi%20su%20sitio%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%91%8B" target="_blank" rel="noopener" aria-label="Abrir chat de WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.13c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.45-.61-.45-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.85c.14.18 1.93 2.94 4.67 4.12.65.28 1.16.45 1.56.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.29.23-.64.23-1.2.16-1.31-.07-.11-.25-.18-.52-.32zM16.03 28C9.94 28 5 23.06 5 16.97 5 10.89 9.94 6 16.03 6 22.11 6 27 10.89 27 16.97 27 23.06 22.11 28 16.03 28zm8.35-4.62C26.78 21.8 28 19.01 28 16.01 28 8.83 22.18 3 15 3S2 8.83 2 16.01C2 23.2 7.83 29 15.01 29c2.99 0 5.77-1.12 7.9-2.98L29 30l-4.62-6.62z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
