@@ -1,0 +1,5 @@
+# robots.txt para Web Simple & Pro
+User-agent: *
+Allow: /
+
+Sitemap: https://jhs212.github.io/paginas-web-sencillas/sitemap.xml
