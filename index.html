@@ -3,193 +3,243 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0f19" />
+  <meta name="theme-color" content="#0ea5e9" />
 
-  <!-- SEO básico -->
+  <!-- =========================
+       SEO (BÁSICO + TÉCNICO)
+  ========================== -->
   <title>Páginas Web Sencillas y Funcionales | Web Simple & Pro</title>
-  <meta name="description" content="Creamos páginas web rápidas, modernas y enfocadas en conseguir clientes. Plan Básico (sin dominio ni hosting) y Plan Estándar (con publicación y soporte)." />
+  <meta name="description" content="Diseño y desarrollo de páginas web rápidas y profesionales. Plan Básico (sin dominio ni hosting) y Plan Estándar (publicación + SEO). Botón de WhatsApp incluido." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jhs212.github.io/paginas-web-sencillas/" />
 
-  <!-- Open Graph / WhatsApp / Facebook -->
+  <!-- Open Graph (WhatsApp/Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:title" content="Páginas Web Sencillas y Funcionales | Web Simple & Pro" />
-  <meta property="og:description" content="Páginas web limpias, rápidas y optimizadas. Diferencia clara entre Plan Básico (sin dominio/hosting) y Plan Estándar (publicación + soporte)." />
+  <meta property="og:description" content="Plan Básico (sin dominio/hosting) y Plan Estándar (publicación + SEO). Web clara, rápida y con WhatsApp." />
   <meta property="og:url" content="https://jhs212.github.io/paginas-web-sencillas/" />
-  <!-- Si luego subes una imagen social, descomenta y ajusta:
+  <!-- Sube una imagen y descomenta:
   <meta property="og:image" content="https://jhs212.github.io/paginas-web-sencillas/og-image.jpg" />
   -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Páginas Web Sencillas y Funcionales | Web Simple & Pro" />
-  <meta name="twitter:description" content="Páginas web enfocadas en convertir: claras, rápidas y con botón de WhatsApp. Plan Básico vs Estándar." />
+  <meta name="twitter:description" content="Plan Básico vs Estándar. Página rápida, clara y lista para recibir contactos." />
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://api.whatsapp.com" />
-  <link rel="preconnect" href="https://wa.me" />
+  <!-- Schema.org (SEO Avanzado) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Web Simple & Pro",
+    "url": "https://jhs212.github.io/paginas-web-sencillas/",
+    "areaServed": "CO",
+    "serviceType": "Diseño y desarrollo de páginas web",
+    "description": "Diseño y desarrollo de páginas web sencillas, rápidas y enfocadas en generar contactos. Plan Básico (sin dominio ni hosting) y Plan Estándar (publicación + SEO).",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+57-316-872-6521",
+      "availableLanguage": ["es"]
+    }
+  }
+  </script>
 
   <style>
     :root{
-      --bg:#0b0f19;
-      --panel:#121a2b;
-      --card:#0f172a;
-      --text:#e6e8ee;
-      --muted:#b6bfd6;
-      --line:rgba(255,255,255,.10);
-      --accent:#39d98a;
-      --accent2:#60a5fa;
-      --warn:#fbbf24;
-      --radius:18px;
-      --shadow: 0 20px 50px rgba(0,0,0,.35);
-      --max: 1080px;
+      --bg:#f6f9ff;
+      --bg2:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --blue:#0ea5e9;
+      --blue2:#0284c7;
+      --green:#16a34a;
+      --green2:#22c55e;
+      --orange:#fb923c;
+      --shadow: 0 18px 50px rgba(15, 23, 42, .12);
+      --radius: 18px;
+      --max: 1120px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(96,165,250,.25), transparent 55%),
-                  radial-gradient(1200px 600px at 80% 0%, rgba(57,217,138,.18), transparent 60%),
-                  var(--bg);
       color:var(--text);
+      background:
+        radial-gradient(900px 450px at 15% -10%, rgba(14,165,233,.18), transparent 60%),
+        radial-gradient(900px 450px at 80% 0%, rgba(34,197,94,.10), transparent 60%),
+        var(--bg);
       line-height:1.5;
     }
+
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.6);
+      font-size:13px;
+      color:var(--muted);
+      gap:8px;
+      align-items:center;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;background:var(--blue);
+      box-shadow:0 0 0 4px rgba(14,165,233,.12);
+    }
+
+    /* Header */
     header{
-      position:sticky; top:0; z-index:30;
+      position:sticky;
+      top:0;
+      z-index:50;
       backdrop-filter: blur(10px);
-      background: rgba(11,15,25,.65);
-      border-bottom: 1px solid var(--line);
+      background: rgba(246,249,255,.72);
+      border-bottom:1px solid var(--line);
     }
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 0;
       gap:14px;
     }
     .brand{
-      display:flex; align-items:center; gap:10px;
+      display:flex;
+      gap:12px;
+      align-items:center;
       text-decoration:none;
     }
     .logo{
-      width:38px; height:38px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(96,165,250,.9), rgba(57,217,138,.9));
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, var(--blue), rgba(34,197,94,.95));
       box-shadow: var(--shadow);
     }
-    .brand strong{font-weight:800; letter-spacing:.2px}
+    .brand-title{font-weight:900; letter-spacing:-.2px;}
+    .brand-sub{font-size:12px; color:var(--muted); margin-top:1px;}
     nav ul{
-      list-style:none; display:flex; gap:14px; padding:0; margin:0;
-      flex-wrap:wrap; justify-content:flex-end;
+      list-style:none;
+      display:flex;
+      gap:6px;
+      padding:0;
+      margin:0;
+      flex-wrap:wrap;
+      justify-content:center;
     }
     nav a{
+      display:inline-flex;
+      padding:9px 10px;
+      border-radius:12px;
       text-decoration:none;
       color:var(--muted);
-      padding:8px 10px;
-      border-radius:12px;
       border:1px solid transparent;
     }
-    nav a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.04)}
+    nav a:hover{
+      border-color:var(--line);
+      background:rgba(255,255,255,.6);
+      color:var(--text);
+    }
+
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
       padding:12px 14px;
       border-radius:14px;
-      border:1px solid var(--line);
+      font-weight:800;
       text-decoration:none;
-      font-weight:700;
-      gap:10px;
-      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.7);
+      color:var(--text);
     }
+    .btn:hover{filter:brightness(1.02)}
     .btn.primary{
-      background: linear-gradient(135deg, rgba(57,217,138,.95), rgba(96,165,250,.85));
-      border-color: transparent;
-      color:#061018;
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      color:#fff;
+      border-color:transparent;
+      box-shadow: 0 14px 35px rgba(14,165,233,.22);
     }
-    .btn.primary:hover{filter:brightness(1.05)}
-    .btn.ghost:hover{background:rgba(255,255,255,.06)}
-    .hero{
-      padding:54px 0 26px;
+    .btn.success{
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      color:#05210e;
+      border-color:transparent;
+      box-shadow: 0 14px 35px rgba(34,197,94,.20);
     }
+
+    /* Hero */
+    .hero{padding:42px 0 22px;}
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
       align-items:stretch;
     }
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      color:var(--muted);
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      padding:8px 12px; border-radius:999px;
-      margin-bottom:14px;
-    }
-    h1{
-      font-size: clamp(28px, 3.4vw, 44px);
-      line-height:1.1;
-      margin:0 0 12px;
-      letter-spacing:-.5px;
-    }
-    .lead{
-      color:var(--muted);
-      font-size: 16.5px;
-      margin:0 0 18px;
-      max-width: 58ch;
-    }
-    .hero-actions{
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin: 16px 0 12px;
-    }
-    .trust{
-      display:flex; gap:10px; flex-wrap:wrap;
-      color:var(--muted);
-      font-size: 14px;
-      margin-top:8px;
-    }
-    .pill{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      padding:8px 10px;
-      border-radius:999px;
-    }
-    .panel{
-      background: linear-gradient(180deg, rgba(18,26,43,.92), rgba(15,23,42,.75));
+    .hero-card{
+      background: rgba(255,255,255,.78);
       border:1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-    }
-    .hero-card{
       padding:18px;
+    }
+    h1{
+      margin:10px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      letter-spacing:-.7px;
+      line-height:1.08;
+    }
+    .lead{margin:0 0 16px; font-size:16.5px;}
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 4px;}
+    .hero-badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .list{
+      margin:12px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .list li{
       display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .hero-card h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:-.2px;
-    }
-    .hero-card p{margin:0; color:var(--muted); font-size:14.5px}
-    .checklist{margin:0; padding:0; list-style:none; display:grid; gap:10px; margin-top:8px}
-    .checklist li{
-      display:flex; gap:10px; align-items:flex-start;
+      gap:10px;
+      align-items:flex-start;
       padding:10px 10px;
-      border:1px solid var(--line);
       border-radius:14px;
-      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      background: rgba(246,249,255,.8);
+      color:var(--muted);
     }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: var(--accent);
-      margin-top:5px;
-      box-shadow: 0 0 0 4px rgba(57,217,138,.12);
+    .check{
+      width:18px;height:18px;border-radius:6px;
+      background: rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.28);
+      position:relative;
       flex:0 0 auto;
+      margin-top:2px;
+    }
+    .check:after{
+      content:"";
+      position:absolute;
+      width:8px;height:4px;
+      border-left:2px solid var(--green);
+      border-bottom:2px solid var(--green);
+      transform:rotate(-45deg);
+      left:4px; top:5px;
     }
 
-    section{padding:34px 0}
+    /* Sections */
+    section{padding:28px 0;}
     .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
       gap:18px;
       margin-bottom:14px;
     }
@@ -198,218 +248,195 @@
       font-size: clamp(20px, 2.2vw, 28px);
       letter-spacing:-.3px;
     }
-    .section-title p{margin:0; color:var(--muted); max-width:65ch}
-
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
+    .section-title p{margin:0; max-width:70ch; color:var(--muted);}
+    .grid-2{display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:16px;}
+    .grid-3{display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px;}
     .card{
-      padding:16px;
+      background: rgba(255,255,255,.78);
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,.03);
-    }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .card p{margin:0; color:var(--muted); font-size:14.5px}
-
-    .plans{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .plan{
+      box-shadow: var(--shadow);
       padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:18px; letter-spacing:-.2px;}
+    .card p{margin:0; color:var(--muted);}
+    .card ul{margin:10px 0 0; padding-left:18px; color:var(--muted); display:grid; gap:8px;}
+
+    /* CTA strip */
+    .cta-strip{
+      margin:18px 0 0;
       border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      position:relative;
-      overflow:hidden;
+      border:1px solid rgba(14,165,233,.22);
+      background: linear-gradient(135deg, rgba(14,165,233,.10), rgba(34,197,94,.08));
+      padding:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    .plan.featured{
-      background: linear-gradient(180deg, rgba(96,165,250,.15), rgba(57,217,138,.12));
-      border-color: rgba(96,165,250,.35);
+    .cta-strip strong{font-size:16px;}
+    .cta-strip .muted{margin:2px 0 0;}
+
+    /* Plans */
+    .plans-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:14px;
     }
-    .badge{
-      position:absolute; top:14px; right:14px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.25);
+    .plan-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .tag{
+      font-size:12px;
       padding:6px 10px;
       border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
+      background: rgba(2,132,199,.10);
+      border:1px solid rgba(2,132,199,.18);
+      color: rgba(2,132,199,.95);
+      font-weight:800;
+      white-space:nowrap;
     }
-    .price{
-      font-size:28px;
-      font-weight:900;
-      letter-spacing:-.5px;
-      margin:6px 0 2px;
+    .tag.reco{
+      background: rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.22);
+      color: rgba(22,163,74,.95);
     }
-    .small{
-      color:var(--muted);
-      font-size:13px;
-      margin:0 0 12px;
-    }
-    .plan ul{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
-    .plan li{display:flex; gap:10px; align-items:flex-start; color:var(--muted)}
-    .tick{
-      width:18px; height:18px; border-radius:6px;
-      background: rgba(57,217,138,.18);
-      border:1px solid rgba(57,217,138,.35);
-      flex:0 0 auto;
-      margin-top:2px;
-      position:relative;
-    }
-    .tick:after{
-      content:"";
-      position:absolute; inset:0;
-      margin:auto;
-      width:8px; height:4px;
-      border-left:2px solid var(--accent);
-      border-bottom:2px solid var(--accent);
-      transform: rotate(-45deg);
-      top:5px; left:4px;
-    }
-    .warn{
-      display:flex; gap:10px; align-items:flex-start;
+    .warning{
       margin-top:12px;
       padding:12px;
       border-radius:14px;
-      border:1px dashed rgba(251,191,36,.35);
-      background: rgba(251,191,36,.08);
+      border:1px dashed rgba(251,146,60,.55);
+      background: rgba(251,146,60,.10);
       color: var(--muted);
-      font-size:13.5px;
     }
-    .warn b{color:var(--text)}
-    .cta-row{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
-    }
+    .plan-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
 
+    /* Compare table */
     .compare{
       margin-top:14px;
-      overflow:auto;
       border-radius: var(--radius);
       border:1px solid var(--line);
-      background: rgba(255,255,255,.02);
+      overflow:auto;
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow);
     }
     table{
       width:100%;
-      border-collapse: collapse;
-      min-width: 720px;
+      border-collapse:collapse;
+      min-width: 760px;
     }
     th, td{
-      padding:12px 12px;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
+      padding:12px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+      color:var(--muted);
       font-size:14px;
-      vertical-align: top;
     }
     th{
-      text-align:left;
-      color: var(--text);
-      background: rgba(255,255,255,.03);
-      position: sticky;
-      top: 0;
-      z-index: 1;
+      color:var(--text);
+      background: rgba(246,249,255,.85);
+      position:sticky;
+      top:0;
+      z-index:1;
     }
+    td strong{color:var(--text);}
     tr:last-child td{border-bottom:none}
-    td strong{color:var(--text)}
-    .yes{color: var(--text)}
-    .no{color: rgba(255,255,255,.55)}
+    .yes{color: var(--text); font-weight:800;}
+    .no{color: rgba(71,85,105,.85);}
 
+    /* FAQ */
     details{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,.03);
-      padding:14px 14px;
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--shadow);
+      padding:14px 16px;
     }
-    details + details{margin-top:10px}
-    summary{cursor:pointer; font-weight:800; color:var(--text)}
-    details p{margin:10px 0 0; color:var(--muted)}
+    details + details{margin-top:12px;}
+    summary{cursor:pointer; font-weight:900; color:var(--text);}
+    details p{margin:10px 0 0; color:var(--muted);}
 
+    /* Footer */
     footer{
-      padding:24px 0 40px;
-      color:rgba(255,255,255,.55);
+      padding:26px 0 40px;
       border-top:1px solid var(--line);
+      color: rgba(71,85,105,.95);
     }
 
-    /* WhatsApp floating button */
+    /* WhatsApp floating */
     .wa-fab{
       position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:60;
+      right:16px;
+      bottom:16px;
+      z-index:9999;
       display:flex;
       align-items:center;
       gap:10px;
-      text-decoration:none;
       padding:12px 14px;
       border-radius:999px;
-      background: rgba(57,217,138,.16);
-      border:1px solid rgba(57,217,138,.35);
-      box-shadow: var(--shadow);
-      color: var(--text);
-      backdrop-filter: blur(10px);
+      text-decoration:none;
+      font-weight:900;
+      background: rgba(34,197,94,.92);
+      color:#05210e;
+      box-shadow: 0 18px 40px rgba(15,23,42,.22);
     }
+    .wa-fab:hover{filter:brightness(1.03)}
     .wa-icon{
       width:18px;height:18px;border-radius:6px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(57,217,138,.12);
+      background: rgba(5,33,14,.18);
       position:relative;
       flex:0 0 auto;
     }
     .wa-icon:after{
       content:"";
       position:absolute;
-      width:8px; height:8px;
-      border:2px solid rgba(6,16,24,.85);
-      border-top:0; border-left:0;
-      transform: rotate(45deg);
-      left:4px; top:2px;
-      opacity:.35;
+      width:10px;height:10px;
+      border:2px solid rgba(5,33,14,.35);
+      border-top:0;border-left:0;
+      transform:rotate(45deg);
+      left:3px; top:1px;
     }
-    .wa-fab span{font-weight:800}
-    .wa-fab small{display:block; font-weight:600; color: var(--muted); margin-top:-2px}
+    .wa-fab small{display:block; font-weight:800; opacity:.78; margin-top:-2px;}
 
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns: 1fr}
-      .grid-3{grid-template-columns: 1fr}
-      .plans{grid-template-columns: 1fr}
-      nav ul{display:none}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr;}
+      .grid-3{grid-template-columns:1fr;}
+      .grid-2{grid-template-columns:1fr;}
+      .plans-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width: 860px){
+      nav ul{display:none;}
     }
   </style>
-
-  <!-- Schema.org (SEO avanzado) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"Web Simple & Pro",
-    "areaServed":"CO",
-    "serviceType":"Diseño y desarrollo de páginas web",
-    "url":"https://jhs212.github.io/paginas-web-sencillas/",
-    "description":"Diseño y desarrollo de páginas web sencillas, rápidas y enfocadas en generar contactos. Plan Básico (sin dominio ni hosting) y Plan Estándar (publicación + soporte).",
-    "contactPoint":{
-      "@type":"ContactPoint",
-      "contactType":"sales",
-      "telephone":"+57-316-872-6521",
-      "availableLanguage":["es"]
-    }
-  }
-  </script>
 </head>
 
 <body>
+  <!-- =========================
+       CONFIG RÁPIDA
+  ========================== -->
+  <script>
+    // Ajusta si necesitas
+    window.__CFG__ = {
+      BRAND: "Web Simple & Pro",
+      SITE_URL: "https://jhs212.github.io/paginas-web-sencillas/",
+      WHATSAPP_NUMBER: "573168726521" // +57 316 872 6521
+    };
+  </script>
+
   <header>
     <div class="wrap">
       <div class="nav">
         <a class="brand" href="#inicio" aria-label="Ir al inicio">
           <div class="logo" aria-hidden="true"></div>
           <div>
-            <strong>Web Simple &amp; Pro</strong><br/>
-            <span style="color:var(--muted);font-size:12px;">Páginas web que convierten</span>
+            <div class="brand-title">Web Simple &amp; Pro</div>
+            <div class="brand-sub">Páginas web que convierten</div>
           </div>
         </a>
 
@@ -418,12 +445,14 @@
             <li><a href="#que-es">¿Qué es?</a></li>
             <li><a href="#incluye">Incluye</a></li>
             <li><a href="#planes">Planes</a></li>
+            <li><a href="#para-quien">Para quién</a></li>
+            <li><a href="#por-que">¿Por qué elegirnos?</a></li>
             <li><a href="#proceso">Proceso</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </nav>
 
-        <a class="btn primary" href="https://wa.me/573168726521?text=Hola%2C+quiero+informaci%C3%B3n+sobre+mi+p%C3%A1gina+web+sencilla+y+funcional." target="_blank" rel="noopener">
+        <a class="btn primary" id="ctaTop" href="#" target="_blank" rel="noopener">
           Hablar por WhatsApp
         </a>
       </div>
@@ -433,39 +462,41 @@
   <main id="inicio" class="hero">
     <div class="wrap">
       <div class="hero-grid">
-        <div>
-          <div class="kicker">
-            <span class="pill">Entrega rápida</span>
-            <span class="pill">Diseño responsive</span>
-            <span class="pill">SEO listo</span>
+        <div class="hero-card">
+          <div class="hero-badges">
+            <span class="pill"><span class="dot"></span>Entrega rápida</span>
+            <span class="pill"><span class="dot"></span>Diseño responsive</span>
+            <span class="pill"><span class="dot"></span>SEO listo</span>
           </div>
 
-          <h1>Páginas web sencillas y funcionales para que te contacten fácil.</h1>
-          <p class="lead">
-            Sitios limpios, rápidos y pensados para convertir visitas en conversaciones.
-            Ideales para emprendedores y negocios que quieren presencia profesional sin enredos.
+          <h1>Presencia clara en internet, sin enredos ni costos altos.</h1>
+          <p class="lead muted">
+            Creamos sitios limpios, rápidos y pensados para que te encuentren, entiendan lo que ofreces y te contacten fácil.
+            Diseño profesional con foco en lo esencial.
           </p>
 
           <div class="hero-actions">
             <a class="btn primary" href="#planes">Ver planes</a>
-            <a class="btn ghost" href="#incluye">Qué incluye</a>
+            <a class="btn" href="#incluye">Qué incluye</a>
           </div>
 
-          <div class="trust">
-            <span class="pill">✅ Estructura clara</span>
-            <span class="pill">✅ Botón WhatsApp fijo</span>
-            <span class="pill">✅ Meta tags + Schema</span>
+          <div class="cta-strip">
+            <div>
+              <strong>¿Listo para empezar?</strong>
+              <div class="muted">Podemos tener tu página base en pocos días.</div>
+            </div>
+            <a class="btn success" id="ctaStrip" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
           </div>
         </div>
 
-        <aside class="panel hero-card" aria-label="Resumen de lo que obtienes">
-          <h2>Lo que obtienes</h2>
-          <p>Una web lista para explicar lo que haces y facilitar el contacto.</p>
-          <ul class="checklist">
-            <li><span class="dot"></span><div><b>Secciones esenciales</b><br/><span style="color:var(--muted)">Inicio, servicios, sobre ti y contacto.</span></div></li>
-            <li><span class="dot"></span><div><b>Optimizada para celular</b><br/><span style="color:var(--muted)">Diseño adaptable y lectura fácil.</span></div></li>
-            <li><span class="dot"></span><div><b>WhatsApp visible</b><br/><span style="color:var(--muted)">Botón flotante y CTA claros.</span></div></li>
-            <li><span class="dot"></span><div><b>SEO preparado</b><br/><span style="color:var(--muted)">Metas, OpenGraph y Schema.</span></div></li>
+        <aside class="hero-card" aria-label="Lo que obtienes">
+          <h2 style="margin:0 0 10px; letter-spacing:-.2px;">Lo que obtienes</h2>
+          <ul class="list">
+            <li><span class="check" aria-hidden="true"></span><div><b>Estructura clara</b><br><span class="muted">Inicio, servicios/actividades, sobre ti y contacto.</span></div></li>
+            <li><span class="check" aria-hidden="true"></span><div><b>Diseño moderno y adaptable</b><br><span class="muted">Se ve bien en celular y computador.</span></div></li>
+            <li><span class="check" aria-hidden="true"></span><div><b>Datos visibles + WhatsApp</b><br><span class="muted">Botón de WhatsApp incluido para contacto rápido.</span></div></li>
+            <li><span class="check" aria-hidden="true"></span><div><b>Textos optimizados</b><br><span class="muted">Edición básica y jerarquía de títulos.</span></div></li>
+            <li><span class="check" aria-hidden="true"></span><div><b>Velocidad y buenas prácticas</b><br><span class="muted">Mejor rendimiento y base SEO técnica (según plan).</span></div></li>
           </ul>
         </aside>
       </div>
@@ -475,22 +506,18 @@
   <section id="que-es">
     <div class="wrap">
       <div class="section-title">
-        <h2>¿Qué es una página web sencilla?</h2>
-        <p>Una web enfocada en lo esencial: explicar tu oferta, generar confianza y facilitar el contacto.</p>
+        <h2>¿Qué son las páginas web sencillas?</h2>
+        <p>Son sitios pensados para mostrar información clave de forma clara y directa: que entiendan lo que haces y te contacten sin perderse.</p>
       </div>
 
-      <div class="grid-3">
+      <div class="grid-2">
         <div class="card">
-          <h3>Clara</h3>
-          <p>Textos directos, estructura simple y navegación sin distracciones.</p>
+          <h3>Claridad</h3>
+          <p>Textos directos, estructura simple y llamados a la acción visibles.</p>
         </div>
         <div class="card">
-          <h3>Rápida</h3>
-          <p>Buenas prácticas para que cargue ágil y se sienta profesional.</p>
-        </div>
-        <div class="card">
-          <h3>Enfocada en contacto</h3>
-          <p>CTA visibles, WhatsApp fijo y secciones pensadas para convertir.</p>
+          <h3>Funcionalidad</h3>
+          <p>Priorizamos lo esencial para evitar costos innecesarios y facilitar el mantenimiento.</p>
         </div>
       </div>
     </div>
@@ -499,81 +526,88 @@
   <section id="incluye">
     <div class="wrap">
       <div class="section-title">
-        <h2>¿Qué incluye?</h2>
-        <p>Lo necesario para verte bien en internet y empezar a recibir consultas.</p>
+        <h2>¿Qué incluye una página web sencilla y funcional?</h2>
+        <p>Incluye lo necesario para que tu negocio se muestre de manera profesional y efectiva en internet.</p>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h3>Diseño responsive</h3>
-          <p>Se ve bien en celular, tablet y computador.</p>
+          <h3>Propuesta clara + CTA</h3>
+          <p>Mensaje principal y botón para que te contacten.</p>
         </div>
         <div class="card">
-          <h3>Secciones base</h3>
-          <p>Inicio, servicios/actividades, sobre ti y contacto (más según plan).</p>
+          <h3>Sección de servicios</h3>
+          <p>Descripciones breves, enfocadas en beneficios.</p>
         </div>
         <div class="card">
-          <h3>Contacto y WhatsApp</h3>
-          <p>Datos visibles + botón fijo de WhatsApp para que te escriban en 1 clic.</p>
+          <h3>Contacto visible</h3>
+          <p>WhatsApp, teléfono, correo y ubicación (si aplica).</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- =========================
+       PLANES (BÁSICO vs ESTÁNDAR)
+  ========================== -->
   <section id="planes">
     <div class="wrap">
       <div class="section-title">
         <h2>Planes</h2>
-        <p>Diferencia clara entre una web “lista para mostrar” y una web “lista para publicar”.</p>
+        <p>Diferencia clara: <b>Básico</b> es entrega del sitio (sin dominio/hosting). <b>Estándar</b> incluye publicación + SEO técnico.</p>
       </div>
 
-      <div class="plans">
-        <div class="plan">
-          <div class="badge">Plan Básico</div>
-          <h3>Web Base (sin enredos)</h3>
-          <div class="price">Cotización</div>
-          <p class="small">Pago único · Ideal para empezar rápido</p>
-
-          <ul>
-            <li><span class="tick"></span>Diseño sencillo y profesional (1 página tipo landing)</li>
-            <li><span class="tick"></span>Secciones esenciales (inicio, servicios, sobre ti, contacto)</li>
-            <li><span class="tick"></span>Botón de WhatsApp + enlaces a redes</li>
-            <li><span class="tick"></span>SEO básico en contenido (títulos y jerarquía)</li>
-          </ul>
-
-          <div class="warn">
-            <div>⚠️</div>
-            <div><b>Importante:</b> Este plan es <b>sin dominio ni hosting</b>. Te entregamos el sitio listo, pero la publicación requiere hosting/dominio (o GitHub Pages).</div>
+      <div class="plans-grid">
+        <!-- Plan Básico -->
+        <div class="card">
+          <div class="plan-head">
+            <h3 style="margin:0;">Plan Básico</h3>
+            <span class="tag">Entrega de archivos</span>
           </div>
 
-          <div class="cta-row">
-            <a class="btn primary" href="https://wa.me/573168726521?text=Hola%2C+quiero+el+PLAN+B%C3%81SICO+(sin+dominio+ni+hosting).+%C2%BFMe+cuentas+valores+y+tiempos%3F" target="_blank" rel="noopener">Quiero el Básico</a>
-            <a class="btn ghost" href="#faq">¿Qué es hosting/dominio?</a>
+          <p class="muted" style="margin:0 0 10px;">
+            Ideal si quieres empezar rápido con una web clara tipo landing.
+          </p>
+
+          <ul>
+            <li>1 página tipo landing (Inicio + Servicios + Sobre ti + Contacto)</li>
+            <li>Diseño responsive (celular y PC)</li>
+            <li>Botón de WhatsApp y enlaces a redes</li>
+            <li>SEO básico en contenido (títulos, estructura)</li>
+          </ul>
+
+          <div class="warning">
+            <b>Importante:</b> este plan es <b>SIN dominio ni hosting</b>.
+            Se entrega el sitio listo, pero no queda publicado automáticamente.
+          </div>
+
+          <div class="plan-actions">
+            <a class="btn primary" id="ctaBasic" href="#" target="_blank" rel="noopener">Quiero el Básico</a>
+            <a class="btn" href="#faq">¿Qué es hosting/dominio?</a>
           </div>
         </div>
 
-        <div class="plan featured">
-          <div class="badge">Más recomendado</div>
-          <h3>Plan Estándar (publicada + soporte)</h3>
-          <div class="price">Cotización</div>
-          <p class="small">Pago único · Lista para publicar y usar</p>
-
-          <ul>
-            <li><span class="tick"></span>Todo lo del Básico</li>
-            <li><span class="tick"></span>Publicación/puesta en línea (configuración incluida)</li>
-            <li><span class="tick"></span>Optimización SEO en HTML (metas + OpenGraph + Schema)</li>
-            <li><span class="tick"></span>Formulario (opcional) + mapa (opcional)</li>
-            <li><span class="tick"></span>Soporte inicial para ajustes post-entrega</li>
-          </ul>
-
-          <div class="warn" style="border-color: rgba(96,165,250,.35); background: rgba(96,165,250,.10);">
-            <div>💡</div>
-            <div><b>Ideal si</b> quieres que quede publicada con todo lo necesario para presentarte profesionalmente.</div>
+        <!-- Plan Estándar -->
+        <div class="card" style="border:1px solid rgba(34,197,94,.25); background: rgba(34,197,94,.07);">
+          <div class="plan-head">
+            <h3 style="margin:0;">Plan Estándar</h3>
+            <span class="tag reco">Recomendado</span>
           </div>
 
-          <div class="cta-row">
-            <a class="btn primary" href="https://wa.me/573168726521?text=Hola%2C+quiero+el+PLAN+EST%C3%81NDAR+(publicaci%C3%B3n+%2B+SEO).+%C2%BFMe+cuentas+valores+y+qu%C3%A9+necesitas+de+mi%3F" target="_blank" rel="noopener">Quiero el Estándar</a>
-            <a class="btn ghost" href="#proceso">Ver proceso</a>
+          <p class="muted" style="margin:0 0 10px;">
+            Ideal si quieres que quede <b>publicada</b> y lista para presentar profesionalmente.
+          </p>
+
+          <ul>
+            <li>Todo lo del Plan Básico</li>
+            <li>Publicación/activación (configuración incluida)</li>
+            <li><b>SEO técnico en HTML</b> (metas, OpenGraph, Schema)</li>
+            <li>Soporte inicial para ajustes post-entrega</li>
+          </ul>
+
+          <div class="plan-actions">
+            <a class="btn success" id="ctaStandard" href="#" target="_blank" rel="noopener">Quiero el Estándar</a>
+            <a class="btn" href="#proceso">Ver proceso</a>
           </div>
         </div>
       </div>
@@ -594,12 +628,12 @@
               <td class="yes">Sí</td>
             </tr>
             <tr>
-              <td><strong>1 página tipo landing</strong></td>
+              <td><strong>Landing 1 página</strong></td>
               <td class="yes">Sí</td>
               <td class="yes">Sí</td>
             </tr>
             <tr>
-              <td><strong>Botón WhatsApp flotante</strong></td>
+              <td><strong>Botón WhatsApp</strong></td>
               <td class="yes">Sí</td>
               <td class="yes">Sí</td>
             </tr>
@@ -614,7 +648,7 @@
               <td class="yes">Configuración / publicación incluida</td>
             </tr>
             <tr>
-              <td><strong>SEO técnico (metas, OG, Schema)</strong></td>
+              <td><strong>SEO técnico (metas/OG/Schema)</strong></td>
               <td class="no">No</td>
               <td class="yes">Sí</td>
             </tr>
@@ -626,35 +660,75 @@
           </tbody>
         </table>
       </div>
+    </div>
+  </section>
 
+  <section id="para-quien">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>¿Para quién están pensadas?</h2>
+        <p>Para personas y pequeños negocios que necesitan presencia clara en internet sin procesos complejos ni altos costos.</p>
+      </div>
+
+      <div class="card">
+        <p class="muted" style="margin:0;">
+          Profesionales independientes, tiendas locales, emprendimientos, talleres, cursos, restaurantes, servicios a domicilio y más.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>¿Por qué elegir una página web sencilla y económica?</h2>
+        <p>Porque cumple su propósito con menos fricción: informa, genera confianza y facilita el contacto.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Ventajas clave</h3>
+          <ul>
+            <li>Navegación simple, textos claros y llamados a la acción visibles.</li>
+            <li>Carga rápida y buenas prácticas de SEO básico.</li>
+            <li>Escalable: se puede añadir blog, catálogo o agendamiento.</li>
+            <li>Soporte para mapas, formularios y enlaces a redes sociales.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Resultados esperados</h3>
+          <p class="muted">
+            Mejor presentación, más confianza y más probabilidad de que el visitante te escriba por WhatsApp o te llame.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="proceso">
     <div class="wrap">
       <div class="section-title">
-        <h2>Proceso de elaboración</h2>
+        <h2>¿Cómo es el proceso de elaboración?</h2>
         <p>Simple, ordenado y rápido.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>1) Brief</h3>
-          <p>Objetivo, servicios, tono y referencia visual.</p>
-        </div>
-        <div class="card">
-          <h3>2) Contenido</h3>
-          <p>Recibimos textos/fotos o los ajustamos con edición básica.</p>
-        </div>
-        <div class="card">
-          <h3>3) Diseño + entrega</h3>
-          <p>Maquetación, revisión, ajustes y publicación (según plan).</p>
-        </div>
+      <div class="card">
+        <ol class="muted" style="margin:0; padding-left:18px; display:grid; gap:8px;">
+          <li><b>Brief:</b> objetivos, servicios y estilo.</li>
+          <li><b>Contenido:</b> recibimos textos y fotos (o los preparamos).</li>
+          <li><b>Diseño:</b> maquetamos la versión inicial.</li>
+          <li><b>Ajustes:</b> revisas y pulimos detalles.</li>
+          <li><b>Publicación:</b> conectamos dominio y activamos (Plan Estándar).</li>
+        </ol>
       </div>
 
-      <div class="cta-row" style="margin-top:16px;">
-        <a class="btn primary" href="https://wa.me/573168726521?text=Hola%2C+quiero+empezar+mi+p%C3%A1gina+web.+%C2%BFQu%C3%A9+necesitas+para+el+brief%3F" target="_blank" rel="noopener">Empezar por WhatsApp</a>
-        <a class="btn ghost" href="#faq">Ver preguntas frecuentes</a>
+      <div class="cta-strip">
+        <div>
+          <strong>¿Te cotizo según tu negocio?</strong>
+          <div class="muted">Dime qué servicio ofreces y qué secciones necesitas.</div>
+        </div>
+        <a class="btn primary" id="ctaBottom" href="#" target="_blank" rel="noopener">Pedir cotización</a>
       </div>
     </div>
   </section>
@@ -663,37 +737,38 @@
     <div class="wrap">
       <div class="section-title">
         <h2>Preguntas frecuentes</h2>
-        <p>Aquí dejamos ultra claro lo de dominio/hosting y lo que incluye cada plan.</p>
+        <p>Aquí dejamos ultra claro lo del Plan Básico (sin dominio/hosting) y lo del SEO.</p>
       </div>
 
       <details>
         <summary>¿Qué es un dominio y qué es hosting?</summary>
         <p>
           <b>Dominio</b> es el nombre de tu web (ej: <i>tumarca.com</i>).<br/>
-          <b>Hosting</b> es el “espacio” donde viven los archivos de tu página para que cualquiera pueda verla en internet.
+          <b>Hosting</b> es el “espacio” donde viven los archivos para que tu página se vea en internet.
         </p>
       </details>
 
       <details>
         <summary>En el Plan Básico, ¿qué entregan exactamente?</summary>
         <p>
-          Te entregamos la página lista (archivos y diseño completo). 
-          <b>No incluye dominio ni hosting</b>, por eso no queda publicada automáticamente.
-          Si quieres que quede en línea, el Plan Estándar incluye la publicación/configuración.
+          Te entregamos la página lista (archivos y diseño completo). <b>No incluye dominio ni hosting</b>,
+          por eso no queda publicada automáticamente. Si quieres que quede en línea, el Plan Estándar incluye la publicación/configuración.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué significa “SEO en el HTML”?</summary>
+        <p>
+          Que la web ya queda preparada para que Google la entienda mejor:
+          <b>título, descripción, estructura de encabezados</b> y (en Plan Estándar) metas técnicas como <b>OpenGraph</b> y <b>Schema</b>.
+          Esto no “garantiza” el puesto #1, pero deja la base correcta.
         </p>
       </details>
 
       <details>
         <summary>¿Puedo empezar con el Básico y luego pasar al Estándar?</summary>
         <p>
-          Sí. Muchos clientes empiezan con el Básico y luego añadimos publicación, SEO técnico y extras.
-        </p>
-      </details>
-
-      <details>
-        <summary>¿La web queda lista para WhatsApp?</summary>
-        <p>
-          Sí. Incluimos enlaces claros y un botón flotante para que te escriban en un clic.
+          Sí. Muchos empiezan con el Básico y luego añadimos publicación, SEO técnico y extras.
         </p>
       </details>
     </div>
@@ -701,30 +776,56 @@
 
   <footer>
     <div class="wrap">
-      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;">
+      <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;">
         <div>
-          <strong style="color:var(--text)">Web Simple &amp; Pro</strong><br/>
-          <span>© <span id="year"></span> — Todos los derechos reservados.</span>
+          <div style="font-weight:900; color:var(--text)">Web Simple &amp; Pro</div>
+          <div>© <span id="year"></span> — Todos los derechos reservados.</div>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn ghost" href="#planes">Planes</a>
-          <a class="btn primary" href="https://wa.me/573168726521?text=Hola%2C+vi+su+sitio+y+quiero+m%C3%A1s+informaci%C3%B3n+%F0%9F%91%8B" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="#planes">Planes</a>
+          <a class="btn primary" id="ctaFooter" href="#" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a class="wa-fab" href="https://wa.me/573168726521?text=Hola%2C+quiero+informaci%C3%B3n+sobre+mi+p%C3%A1gina+web+sencilla+y+funcional." target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
+  <a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
     <span class="wa-icon" aria-hidden="true"></span>
     <div>
-      <span>WhatsApp</span>
+      WhatsApp
       <small>Respuesta rápida</small>
     </div>
   </a>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // ====== WhatsApp links centralizados ======
+    const cfg = window.__CFG__ || {};
+    const phone = cfg.WHATSAPP_NUMBER || "573168726521";
+
+    const msgGeneral = encodeURIComponent("Hola, quiero información sobre la elaboración de mi página web.");
+    const msgBasic = encodeURIComponent("Hola, quiero el PLAN BÁSICO (sin dominio ni hosting). ¿Me cuentas valores y tiempos?");
+    const msgStandard = encodeURIComponent("Hola, quiero el PLAN ESTÁNDAR (publicación + SEO). ¿Me cuentas valores y qué necesitas de mí?");
+    const msgQuote = encodeURIComponent("Hola, quiero una cotización. Mi negocio es: ____ y necesito secciones: ____.");
+
+    const waGeneral = `https://wa.me/${phone}?text=${msgGeneral}`;
+    const waBasic = `https://wa.me/${phone}?text=${msgBasic}`;
+    const waStandard = `https://wa.me/${phone}?text=${msgStandard}`;
+    const waQuote = `https://wa.me/${phone}?text=${msgQuote}`;
+
+    // Botones
+    const setHref = (id, url) => { const el = document.getElementById(id); if(el) el.href = url; };
+
+    setHref("ctaTop", waGeneral);
+    setHref("ctaStrip", waGeneral);
+    setHref("ctaBasic", waBasic);
+    setHref("ctaStandard", waStandard);
+    setHref("ctaBottom", waQuote);
+    setHref("ctaFooter", waGeneral);
+    setHref("waFab", waGeneral);
+
+    // Año
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
