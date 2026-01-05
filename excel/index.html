@@ -1,168 +1,204 @@
-
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Servicios en Excel para organizar ingresos y gastos</title>
-  <meta name="description" content="Servicios en Excel para organizar ingresos y gastos. Dashboards sencillos que muestran en qué gasta más y en qué gasta menos. ES/EN."/>
+  <title>Servicios en Excel | JHS</title>
+  <meta name="description" content="Servicios en Excel para organizar ingresos y gastos. Dashboards sencillos y fáciles de entender. ES/EN"/>
   <style>
-    body{font-family:Arial, sans-serif; margin:0; line-height:1.5; background:#fff;}
-    .wrap{max-width:980px; margin:0 auto; padding:20px;}
-    .top{display:flex; gap:10px; justify-content:flex-end; align-items:center; margin-bottom:10px;}
-    button{padding:8px 12px; border:1px solid #111; background:#fff; border-radius:10px; cursor:pointer;}
-    .hero{padding:18px; border:1px solid #e5e5e5; border-radius:14px;}
-    .muted{color:#555;}
-    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:14px;}
-    .card{border:1px solid #e5e5e5; border-radius:14px; padding:16px;}
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
-    a.btn{display:inline-block; padding:10px 14px; border:1px solid #111; border-radius:10px; text-decoration:none; color:#111;}
-    h1,h2{margin:0 0 10px 0;}
-    ul{margin:8px 0 0 18px;}
-    ol{margin:8px 0 0 18px;}
-    .tag{display:inline-block; padding:4px 10px; border:1px solid #ddd; border-radius:999px; margin-right:8px; font-size:13px;}
+    :root{
+      --brand:#0b5ed7;
+      --ink:#111;
+      --muted:#555;
+      --border:#e6e6e6;
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.5;
+    }
+
+    /* ===== HEADER ===== */
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:14px 0;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .header-inner{
+      max-width:1000px;
+      margin:auto;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand img{
+      height:42px;
+      width:auto;
+      border-radius:6px;
+      background:#fff;
+      padding:4px;
+    }
+    .brand-text{
+      line-height:1.1;
+    }
+    .brand-text strong{
+      font-size:17px;
+      display:block;
+    }
+    .brand-text span{
+      font-size:12px;
+      opacity:.9;
+    }
+
+    .lang button{
+      background:#ffffff20;
+      border:1px solid #ffffff55;
+      color:#fff;
+      padding:7px 10px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    /* ===== CONTENT ===== */
+    .wrap{
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      margin-bottom:14px;
+    }
+    h1,h2{margin-top:0}
+    .muted{color:var(--muted)}
+    .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    a.btn{
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--ink);
+      text-decoration:none;
+      color:var(--ink);
+      background:#fff;
+    }
+    a.btn.primary{
+      background:var(--ink);
+      color:#fff;
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="top">
-      <span class="tag">ES/EN</span>
-      <button onclick="setLang('es')">Español</button>
-      <button onclick="setLang('en')">English</button>
-    </div>
 
-    <!-- ES -->
-    <div id="es">
-      <div class="hero">
-        <h1>Servicios en Excel para organizar ingresos y gastos</h1>
-        <p class="muted">Dashboards sencillos que le muestran en qué gasta más y en qué gasta menos, por mes y por categoría.</p>
-        <div class="cta">
-          <a class="btn" href="https://wa.me/TU_NUMERO_WHATSAPP?text=Hola%2C%20quiero%20un%20dashboard%20en%20Excel%20para%20organizar%20ingresos%20y%20gastos.%20%C2%BFMe%20puedes%20contar%20c%C3%B3mo%20empezamos%3F" target="_blank">Escríbeme por WhatsApp</a>
-          <a class="btn" href="mailto:TU_CORREO">Enviar correo</a>
-        </div>
-        <p class="muted" style="margin-top:8px;">Pagos: Colombia (Nequi/transferencia). Internacional (PayPal). No publicamos la cuenta en la página: enviamos link de pago al confirmar.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h2>¿Qué hacemos?</h2>
-          <ul>
-            <li><b>Dashboards de ingresos y gastos</b> (personas, independientes, negocios unipersonales y pequeños negocios).</li>
-            <li><b>Organización y limpieza de archivos</b> en Excel (datos desordenados, duplicados, formatos).</li>
-            <li><b>Ajustes y mejoras</b> en archivos existentes (reportes, tablas dinámicas, automatización simple).</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>¿Cómo funciona el dashboard?</h2>
-          <ol>
-            <li>Usted registra los datos en un <b>formulario</b> (fecha, tipo, categoría, subcategoría, valor).</li>
-            <li>El archivo <b>clasifica automáticamente</b> la información.</li>
-            <li>Se genera una tabla consolidada y una <b>tabla dinámica</b>.</li>
-            <li>El <b>dashboard</b> se actualiza y muestra resúmenes y gráficos claros.</li>
-          </ol>
-          <p class="muted" style="margin-top:8px;">
-            Entrega en Excel. Incluye categorías estándar y una hoja donde usted puede ajustarlas si lo desea (sin tocar fórmulas ni gráficos).
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Servicio secundario</h2>
-          <p>
-            También se realizan ejercicios de <b>matemática financiera</b>, como ecuaciones de valor, amortizaciones, gradientes, VPN, TIR y razones financieras,
-            desarrollados paso a paso en Excel para fines académicos o de análisis (no es asesoría financiera).
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Importante</h2>
-          <p class="muted">
-            No damos asesoría financiera, no recomendamos inversiones, no ofrecemos señales de trading y no prometemos resultados.
-            Entregamos herramientas de organización, reporte y visualización de datos.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>¿Cómo cobramos?</h2>
-          <ul>
-            <li><b>Plantilla estándar:</b> se paga antes de la entrega.</li>
-            <li><b>Plantilla ajustada:</b> 50% para iniciar y 50% al entregar.</li>
-          </ul>
-          <p class="muted" style="margin-top:8px;">
-            Si el cliente quiere ajustes adicionales (categorías especiales o cambios), se cotiza aparte.
-          </p>
-        </div>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo-jhs.png" alt="JHS Logo">
+      <div class="brand-text">
+        <strong>Servicios en Excel</strong>
+        <span>Ingresos · Gastos · Dashboards</span>
       </div>
     </div>
+    <div class="lang">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
 
-    <!-- EN -->
-    <div id="en" style="display:none;">
-      <div class="hero">
-        <h1>Excel services to organize income and expenses</h1>
-        <p class="muted">Simple dashboards that show where you spend more and where you spend less, by month and category.</p>
-        <div class="cta">
-          <a class="btn" href="https://wa.me/TU_NUMERO_WHATSAPP?text=Hi%2C%20I%20want%20an%20Excel%20dashboard%20to%20track%20income%20and%20expenses.%20How%20do%20we%20start%3F" target="_blank">WhatsApp</a>
-          <a class="btn" href="mailto:TU_CORREO">Email</a>
-        </div>
-        <p class="muted" style="margin-top:8px;">Payments: Colombia (Nequi/bank transfer). International (PayPal via payment link after confirmation).</p>
-      </div>
+<div class="wrap">
 
-      <div class="grid">
-        <div class="card">
-          <h2>What we do</h2>
-          <ul>
-            <li><b>Income & expense dashboards</b> (individuals, freelancers, self-employed, small businesses).</li>
-            <li><b>Data cleaning & organization</b> in Excel (messy files, duplicates, formatting).</li>
-            <li><b>Fix & improve existing spreadsheets</b> (reports, pivots, simple automation).</li>
-          </ul>
-        </div>
+<!-- ESPAÑOL -->
+<div id="es">
+  <div class="card">
+    <h1>Servicios en Excel para organizar ingresos y gastos</h1>
+    <p class="muted">
+      Dashboards claros y sencillos que le muestran en qué gasta más y en qué gasta menos, por mes y por categoría.
+    </p>
 
-        <div class="card">
-          <h2>How the dashboard works</h2>
-          <ol>
-            <li>You enter data using a <b>simple form</b> (date, type, category, subcategory, amount).</li>
-            <li>The file <b>auto-categorizes</b> the information.</li>
-            <li>A clean table and a <b>pivot table</b> are created.</li>
-            <li>The <b>dashboard</b> updates with clear charts and summaries.</li>
-          </ol>
-          <p class="muted" style="margin-top:8px;">
-            Delivered in Excel. Includes standard categories + a safe area to adjust categories (no formula editing needed).
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Secondary service</h2>
-          <p class="muted">
-            We also solve financial math exercises (equations of value, amortization, gradients, NPV, IRR, financial ratios) step-by-step in Excel.
-            This is for academic/analytical purposes only (no financial advice).
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>Important</h2>
-          <p class="muted">
-            We do not provide financial/investment advice, trading signals, or guaranteed outcomes. We deliver reporting and visualization tools.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>How we charge</h2>
-          <ul>
-            <li><b>Standard template:</b> payment before delivery.</li>
-            <li><b>Adjusted template:</b> 50% to start, 50% on delivery.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="cta">
+      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">Escríbeme por WhatsApp</a>
+      <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
     </div>
 
+    <p class="muted" style="margin-top:8px;">
+      Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
+    </p>
   </div>
 
-  <script>
-    function setLang(lang){
-      document.getElementById('es').style.display = (lang==='es') ? 'block' : 'none';
-      document.getElementById('en').style.display = (lang==='en') ? 'block' : 'none';
-    }
-  </script>
+  <div class="card">
+    <h2>¿Qué hacemos?</h2>
+    <ul>
+      <li>Dashboards de ingresos y egresos (personas, independientes y pequeños negocios).</li>
+      <li>Organización y limpieza de archivos en Excel.</li>
+      <li>Ajustes y mejoras en archivos existentes.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>¿Cómo funciona?</h2>
+    <ol>
+      <li>Usted ingresa los datos en un formulario.</li>
+      <li>El archivo clasifica automáticamente la información.</li>
+      <li>Se generan tablas y gráficos.</li>
+      <li>El dashboard se actualiza solo.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Servicio adicional</h2>
+    <p>
+      Ejercicios de matemática financiera: amortizaciones, VPN, TIR, gradientes,
+      ecuaciones de valor y razones financieras en Excel.
+    </p>
+  </div>
+</div>
+
+<!-- ENGLISH -->
+<div id="en" style="display:none;">
+  <div class="card">
+    <h1>Excel services for income and expense tracking</h1>
+    <p class="muted">
+      Simple dashboards to clearly understand where your money goes.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">WhatsApp</a>
+      <a class="btn" href="mailto:jhs.com.co@gmail.com">Email</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+  function setLang(lang){
+    document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  }
+</script>
+
 </body>
 </html>
 
+   
