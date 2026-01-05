@@ -1,215 +1,439 @@
+
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Servicios en Excel | JHS</title>
-<meta name="description" content="Servicios en Excel para organizar ingresos y gastos. Dashboards claros y fáciles de entender.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-:root{
-  --brand:#0b5ed7;
-  --ink:#111;
-  --muted:#555;
-  --border:#e6e6e6;
-  --bg:#ffffff;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.5;
-}
+  <!-- SEO Básico -->
+  <title>Servicios en Excel | Dashboards de ingresos y gastos | JHS</title>
+  <meta name="description" content="Creamos dashboards en Excel para controlar ingresos y gastos. Ideal para personas, independientes y pequeños negocios. Incluye formulario, clasificación automática y reportes claros. ES/EN." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b5ed7" />
 
-/* ===== HEADER ===== */
-header{
-  background:var(--brand);
-  color:#fff;
-  padding:14px 0;
-}
-.header-inner{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.brand img{
-  height:42px;
-  background:#fff;
-  padding:4px;
-  border-radius:6px;
-}
-.brand-text strong{
-  display:block;
-  font-size:18px;
-}
-.brand-text span{
-  font-size:12px;
-  opacity:.9;
-}
-.lang button{
-  background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.4);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:8px;
-  cursor:pointer;
-}
+  <!-- Canonical -->
+  <link rel="canonical" href="https://jhs212.github.io/paginas-web-sencillas/excel/" />
 
-/* ===== CONTENT ===== */
-.wrap{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
-.card{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  margin-bottom:16px;
-}
-h1,h2{margin-top:0}
-.muted{color:var(--muted)}
-.cta{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:10px;
-}
-a.btn{
-  padding:10px 14px;
-  border-radius:10px;
-  border:1px solid var(--ink);
-  text-decoration:none;
-  color:var(--ink);
-}
-a.btn.primary{
-  background:#000;
-  color:#fff;
-  border-color:#000;
-}
-</style>
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Servicios en Excel | Dashboards de ingresos y gastos | JHS" />
+  <meta property="og:description" content="Dashboards en Excel para controlar ingresos y gastos. Formulario + clasificación automática + reportes claros. ES/EN." />
+  <meta property="og:url" content="https://jhs212.github.io/paginas-web-sencillas/excel/" />
+  <meta property="og:image" content="https://jhs212.github.io/paginas-web-sencillas/excel/dashboard_design_1.png" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Servicios en Excel | Dashboards de ingresos y gastos | JHS" />
+  <meta name="twitter:description" content="Dashboards en Excel para controlar ingresos y gastos. ES/EN." />
+  <meta name="twitter:image" content="https://jhs212.github.io/paginas-web-sencillas/excel/dashboard_design_1.png" />
+
+  <!-- Datos estructurados (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"JHS - Servicios en Excel",
+    "url":"https://jhs212.github.io/paginas-web-sencillas/excel/",
+    "image":"https://jhs212.github.io/paginas-web-sencillas/excel/logo-jhs.png",
+    "description":"Creación de dashboards en Excel para controlar ingresos y gastos, organización de datos y ejercicios de matemática financiera.",
+    "areaServed":"CO",
+    "email":"jhs.com.co@gmail.com",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "telephone":"+57-316-872-6521",
+      "availableLanguage":["es","en"]
+    }]
+  }
+  </script>
+
+  <style>
+    :root{
+      --brand:#0b5ed7;
+      --ink:#111;
+      --muted:#555;
+      --border:#e6e6e6;
+      --bg:#fff;
+      --card:#fff;
+      --shadow:0 8px 18px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+
+    /* Header */
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:14px 0;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .header-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:42px;
+      width:auto;
+      border-radius:8px;
+      background:#fff;
+      padding:4px;
+      border:1px solid rgba(255,255,255,.25);
+    }
+    .brand-text{line-height:1.1; min-width:0;}
+    .brand-text strong{
+      display:block;
+      font-size:18px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brand-text span{
+      font-size:12px;
+      opacity:.9;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .lang{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex:0 0 auto;
+    }
+    .lang button{
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.45);
+      color:#fff;
+      padding:7px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .lang button:hover{background:rgba(255,255,255,.22)}
+
+    /* Layout */
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px 20px 50px;
+    }
+    .hero{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:22px;
+      background:var(--card);
+    }
+    .muted{color:var(--muted)}
+    .cards{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      background:var(--card);
+    }
+    h1,h2{margin:0 0 10px 0;}
+    h1{font-size:30px; letter-spacing:-.2px;}
+    h2{font-size:22px;}
+    ul,ol{margin:8px 0 0 18px}
+    .cta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+      align-items:center;
+    }
+    a.btn{
+      display:inline-block;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid var(--ink);
+      text-decoration:none;
+      color:var(--ink);
+      background:#fff;
+      font-weight:700;
+    }
+    a.btn.primary{
+      background:#000;
+      color:#fff;
+      border-color:#000;
+    }
+    a.btn:hover{opacity:.92}
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    .shot{
+      border:1px solid var(--border);
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .shot img{
+      width:100%;
+      display:block;
+    }
+    .shot .cap{
+      padding:10px 12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Footer */
+    footer{
+      margin-top:16px;
+      padding:16px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width: 900px){
+      .gallery{grid-template-columns:1fr;}
+      h1{font-size:26px;}
+    }
+  </style>
 </head>
 
 <body>
-
 <header>
   <div class="header-inner">
     <div class="brand">
-      <img src="logo-jhs.png" alt="JHS Logo">
+      <img src="logo-jhs.png" alt="Logo JHS" loading="eager" />
       <div class="brand-text">
         <strong>Servicios en Excel</strong>
-        <span>Ingresos · Gastos · Dashboards</span>
+        <span>Ingresos · Gastos · Dashboards (ES/EN)</span>
       </div>
     </div>
-    <div class="lang">
-      <button onclick="setLang('es')">ES</button>
-      <button onclick="setLang('en')">EN</button>
+
+    <div class="lang" aria-label="Selector de idioma">
+      <button type="button" onclick="setLang('es')">ES</button>
+      <button type="button" onclick="setLang('en')">EN</button>
     </div>
   </div>
 </header>
 
-<div class="wrap">
+<main class="wrap">
 
-<!-- ===== ESPAÑOL ===== -->
-<div id="es">
+  <!-- ESPAÑOL -->
+  <section id="es">
+    <div class="hero">
+      <h1>Servicios en Excel para organizar ingresos y gastos</h1>
+      <p class="muted">
+        Dashboards claros y sencillos que muestran <b>en qué gasta más</b> y <b>en qué gasta menos</b>,
+        por mes y por categoría. Ideal para <b>personas</b>, <b>independientes</b> y <b>pequeños negocios</b>.
+      </p>
 
-  <div class="card">
-    <h1>Servicios en Excel para organizar ingresos y gastos</h1>
-    <p class="muted">
-      Dashboards claros y sencillos que le muestran en qué gasta más y en qué gasta menos,
-      por mes y por categoría.
-    </p>
+      <div class="cta">
+        <a class="btn primary"
+           href="https://wa.me/573168726521?text=Hola%2C%20estoy%20interesado%20en%20un%20dashboard%20en%20Excel%20para%20ingresos%20y%20gastos.%20%C2%BFC%C3%B3mo%20empezamos%3F"
+           target="_blank" rel="noopener">
+          Escríbeme por WhatsApp
+        </a>
+        <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary"
-         href="https://wa.me/573168726521?text=Hola%20estoy%20interesado%20en%20los%20servicios%20en%20Excel"
-         target="_blank">
-        Escríbeme por WhatsApp
-      </a>
-      <a class="btn" href="mailto:jhs.com.co@gmail.com">
-        Enviar correo
-      </a>
+      <p class="muted" style="margin-top:10px;">
+        Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
+      </p>
     </div>
 
-    <p class="muted" style="margin-top:8px">
-      Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
-    </p>
-  </div>
+    <div class="cards">
+      <div class="card">
+        <h2>Ejemplos de dashboards (3 estilos)</h2>
+        <p class="muted">Haz clic en cualquier imagen para verla en grande.</p>
 
-  <div class="card">
-    <h2>¿Qué hacemos?</h2>
-    <ul>
-      <li>Dashboards de ingresos y egresos (personas, independientes y pequeños negocios).</li>
-      <li>Organización y limpieza de archivos en Excel.</li>
-      <li>Ajustes y mejoras en archivos existentes.</li>
-    </ul>
-  </div>
+        <div class="gallery">
+          <a class="shot" href="dashboard_design_1.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_1.png" alt="Ejemplo Dashboard 1 - Ingresos y Gastos" loading="lazy">
+            <div class="cap"><b>Diseño 1:</b> Ingresos vs Egresos + saldo</div>
+          </a>
 
-  <div class="card">
-    <h2>¿Cómo funciona?</h2>
-    <ol>
-      <li>Usted ingresa los datos en un formulario.</li>
-      <li>El archivo clasifica automáticamente la información.</li>
-      <li>Se generan tablas y gráficos.</li>
-      <li>El dashboard se actualiza solo.</li>
-    </ol>
-  </div>
+          <a class="shot" href="dashboard_design_2.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_2.png" alt="Ejemplo Dashboard 2 - Categorías y tendencias" loading="lazy">
+            <div class="cap"><b>Diseño 2:</b> Categorías + tendencias</div>
+          </a>
 
-  <div class="card">
-    <h2>Servicio adicional</h2>
-    <p>
-      Ejercicios de matemática financiera: amortizaciones, VPN, TIR, gradientes,
-      ecuaciones de valor y razones financieras en Excel.
-    </p>
-  </div>
+          <a class="shot" href="dashboard_design_3.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_3.png" alt="Ejemplo Dashboard 3 - Resumen mensual y gráficos" loading="lazy">
+            <div class="cap"><b>Diseño 3:</b> Resumen mensual + gráficos</div>
+          </a>
+        </div>
+      </div>
 
-</div>
+      <div class="card">
+        <h2>¿Qué hacemos?</h2>
+        <ul>
+          <li><b>Dashboards de ingresos y egresos</b> (personas, independientes y pequeños negocios).</li>
+          <li><b>Organización y limpieza de archivos</b> en Excel (datos desordenados, duplicados, formatos).</li>
+          <li><b>Ajustes y mejoras</b> en archivos existentes (reportes, tablas dinámicas, automatización simple).</li>
+        </ul>
+      </div>
 
-<!-- ===== ENGLISH ===== -->
-<div id="en" style="display:none">
+      <div class="card">
+        <h2>¿Cómo funciona el dashboard?</h2>
+        <ol>
+          <li>Usted ingresa los datos en un <b>formulario</b>.</li>
+          <li>El archivo <b>clasifica automáticamente</b> (categorías/subcategorías).</li>
+          <li>Se genera una tabla consolidada y una <b>tabla dinámica</b>.</li>
+          <li>El <b>dashboard se actualiza</b> y muestra gráficos fáciles de interpretar.</li>
+        </ol>
+        <p class="muted">
+          Entrega en Excel. Incluye categorías estándar y una zona segura para ajustarlas sin tocar fórmulas.
+        </p>
+      </div>
 
-  <div class="card">
-    <h1>Excel services for income and expense tracking</h1>
-    <p class="muted">
-      Simple dashboards that clearly show where your money goes.
-    </p>
+      <div class="card">
+        <h2>Servicio adicional</h2>
+        <p>
+          Ejercicios de matemática financiera en Excel: <b>ecuaciones de valor</b>, <b>amortizaciones</b>,
+          <b>gradientes</b>, <b>VPN</b>, <b>TIR</b> y <b>razones financieras</b>.
+        </p>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary"
-         href="https://wa.me/573168726521?text=Hello%20I%20am%20interested%20in%20Excel%20services"
-         target="_blank">
-        WhatsApp
-      </a>
-      <a class="btn" href="mailto:jhs.com.co@gmail.com">
-        Email
-      </a>
+      <div class="card">
+        <h2>Importante</h2>
+        <p class="muted">
+          No damos asesoría financiera, no recomendamos inversiones ni ofrecemos señales de trading.
+          Entregamos herramientas de organización y visualización de información.
+        </p>
+      </div>
     </div>
 
-    <p class="muted" style="margin-top:8px">
-      Payments: Colombia (local transfer). International: PayPal.
-    </p>
-  </div>
+    <footer>
+      Contacto: <b>jhs.com.co@gmail.com</b> · WhatsApp: <b>+57 316 872 6521</b><br>
+      © JHS. Servicios en Excel. ES/EN.
+    </footer>
+  </section>
 
-</div>
+  <!-- ENGLISH -->
+  <section id="en" style="display:none;">
+    <div class="hero">
+      <h1>Excel services for income & expense tracking</h1>
+      <p class="muted">
+        Clean, simple dashboards that show <b>where you spend more</b> and <b>where you spend less</b>,
+        by month and category. Great for individuals, freelancers, and small businesses.
+      </p>
 
-</div>
+      <div class="cta">
+        <a class="btn primary"
+           href="https://wa.me/573168726521?text=Hello%2C%20I%20am%20interested%20in%20an%20Excel%20dashboard%20for%20income%20and%20expenses.%20How%20do%20we%20start%3F"
+           target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+        <a class="btn" href="mailto:jhs.com.co@gmail.com">Email</a>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Payments: Colombia (local transfer). International: PayPal (payment link).
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Dashboard examples (3 styles)</h2>
+        <p class="muted">Click any image to open it in full size.</p>
+
+        <div class="gallery">
+          <a class="shot" href="dashboard_design_1.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_1.png" alt="Dashboard example 1 - Income vs Expenses" loading="lazy">
+            <div class="cap"><b>Style 1:</b> Income vs Expenses + net balance</div>
+          </a>
+
+          <a class="shot" href="dashboard_design_2.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_2.png" alt="Dashboard example 2 - Categories and trends" loading="lazy">
+            <div class="cap"><b>Style 2:</b> Categories + trends</div>
+          </a>
+
+          <a class="shot" href="dashboard_design_3.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_3.png" alt="Dashboard example 3 - Monthly summary charts" loading="lazy">
+            <div class="cap"><b>Style 3:</b> Monthly summary + charts</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>What we do</h2>
+        <ul>
+          <li><b>Income & expense dashboards</b> for individuals, freelancers, and small businesses.</li>
+          <li><b>Data cleaning & organization</b> in Excel (duplicates, formatting, messy files).</li>
+          <li><b>Fix & improve existing spreadsheets</b> (reports, pivots, simple automation).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>How it works</h2>
+        <ol>
+          <li>You enter data using a <b>simple form</b>.</li>
+          <li>The file <b>auto-categorizes</b> your records.</li>
+          <li>A consolidated table + <b>pivot table</b> is created.</li>
+          <li>The <b>dashboard updates</b> with clear charts.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Extra service</h2>
+        <p class="muted">
+          Financial math exercises in Excel: equations of value, amortization, gradients, NPV, IRR and financial ratios.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Important</h2>
+        <p class="muted">
+          We do not provide investment advice or trading signals. We deliver reporting and visualization tools.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      Contact: <b>jhs.com.co@gmail.com</b> · WhatsApp: <b>+57 316 872 6521</b><br>
+      © JHS. Excel services. ES/EN.
+    </footer>
+  </section>
+
+</main>
 
 <script>
-function setLang(lang){
-  document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
-  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
-}
+  function setLang(lang){
+    const es = document.getElementById('es');
+    const en = document.getElementById('en');
+    es.style.display = (lang === 'es') ? 'block' : 'none';
+    en.style.display = (lang === 'en') ? 'block' : 'none';
+
+    // Ajusta atributo lang para SEO/accesibilidad
+    document.documentElement.lang = (lang === 'en') ? 'en' : 'es';
+  }
 </script>
 
 </body>
