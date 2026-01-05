@@ -1,111 +1,104 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Servicios en Excel | JHS</title>
-  <meta name="description" content="Servicios en Excel para organizar ingresos y gastos. Dashboards sencillos y fáciles de entender. ES/EN"/>
-  <style>
-    :root{
-      --brand:#0b5ed7;
-      --ink:#111;
-      --muted:#555;
-      --border:#e6e6e6;
-      --bg:#ffffff;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-      line-height:1.5;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicios en Excel | JHS</title>
+<meta name="description" content="Servicios en Excel para organizar ingresos y gastos. Dashboards claros y fáciles de entender.">
 
-    /* ===== HEADER ===== */
-    header{
-      background:var(--brand);
-      color:#fff;
-      padding:14px 0;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-    .header-inner{
-      max-width:1000px;
-      margin:auto;
-      padding:0 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .brand img{
-      height:42px;
-      width:auto;
-      border-radius:6px;
-      background:#fff;
-      padding:4px;
-    }
-    .brand-text{
-      line-height:1.1;
-    }
-    .brand-text strong{
-      font-size:17px;
-      display:block;
-    }
-    .brand-text span{
-      font-size:12px;
-      opacity:.9;
-    }
+<style>
+:root{
+  --brand:#0b5ed7;
+  --ink:#111;
+  --muted:#555;
+  --border:#e6e6e6;
+  --bg:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.5;
+}
 
-    .lang button{
-      background:#ffffff20;
-      border:1px solid #ffffff55;
-      color:#fff;
-      padding:7px 10px;
-      border-radius:8px;
-      cursor:pointer;
-    }
+/* ===== HEADER ===== */
+header{
+  background:var(--brand);
+  color:#fff;
+  padding:14px 0;
+}
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand img{
+  height:42px;
+  background:#fff;
+  padding:4px;
+  border-radius:6px;
+}
+.brand-text strong{
+  display:block;
+  font-size:18px;
+}
+.brand-text span{
+  font-size:12px;
+  opacity:.9;
+}
+.lang button{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-    /* ===== CONTENT ===== */
-    .wrap{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
-    }
-    .card{
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:18px;
-      margin-bottom:14px;
-    }
-    h1,h2{margin-top:0}
-    .muted{color:var(--muted)}
-    .cta{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-    a.btn{
-      padding:10px 14px;
-      border-radius:10px;
-      border:1px solid var(--ink);
-      text-decoration:none;
-      color:var(--ink);
-      background:#fff;
-    }
-    a.btn.primary{
-      background:var(--ink);
-      color:#fff;
-    }
-  </style>
+/* ===== CONTENT ===== */
+.wrap{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+.card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:16px;
+}
+h1,h2{margin-top:0}
+.muted{color:var(--muted)}
+.cta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+a.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid var(--ink);
+  text-decoration:none;
+  color:var(--ink);
+}
+a.btn.primary{
+  background:#000;
+  color:#fff;
+  border-color:#000;
+}
+</style>
 </head>
 
 <body>
@@ -128,20 +121,28 @@
 
 <div class="wrap">
 
-<!-- ESPAÑOL -->
+<!-- ===== ESPAÑOL ===== -->
 <div id="es">
+
   <div class="card">
     <h1>Servicios en Excel para organizar ingresos y gastos</h1>
     <p class="muted">
-      Dashboards claros y sencillos que le muestran en qué gasta más y en qué gasta menos, por mes y por categoría.
+      Dashboards claros y sencillos que le muestran en qué gasta más y en qué gasta menos,
+      por mes y por categoría.
     </p>
 
     <div class="cta">
-      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">Escríbeme por WhatsApp</a>
-      <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
+      <a class="btn primary"
+         href="https://wa.me/573168726521?text=Hola%20estoy%20interesado%20en%20los%20servicios%20en%20Excel"
+         target="_blank">
+        Escríbeme por WhatsApp
+      </a>
+      <a class="btn" href="mailto:jhs.com.co@gmail.com">
+        Enviar correo
+      </a>
     </div>
 
-    <p class="muted" style="margin-top:8px;">
+    <p class="muted" style="margin-top:8px">
       Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
     </p>
   </div>
@@ -172,33 +173,44 @@
       ecuaciones de valor y razones financieras en Excel.
     </p>
   </div>
+
 </div>
 
-<!-- ENGLISH -->
-<div id="en" style="display:none;">
+<!-- ===== ENGLISH ===== -->
+<div id="en" style="display:none">
+
   <div class="card">
     <h1>Excel services for income and expense tracking</h1>
     <p class="muted">
-      Simple dashboards to clearly understand where your money goes.
+      Simple dashboards that clearly show where your money goes.
     </p>
 
     <div class="cta">
-      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">WhatsApp</a>
-      <a class="btn" href="mailto:jhs.com.co@gmail.com">Email</a>
+      <a class="btn primary"
+         href="https://wa.me/573168726521?text=Hello%20I%20am%20interested%20in%20Excel%20services"
+         target="_blank">
+        WhatsApp
+      </a>
+      <a class="btn" href="mailto:jhs.com.co@gmail.com">
+        Email
+      </a>
     </div>
+
+    <p class="muted" style="margin-top:8px">
+      Payments: Colombia (local transfer). International: PayPal.
+    </p>
   </div>
+
 </div>
 
 </div>
 
 <script>
-  function setLang(lang){
-    document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
-    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
-  }
+function setLang(lang){
+  document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+  document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+}
 </script>
 
 </body>
 </html>
-
-   
