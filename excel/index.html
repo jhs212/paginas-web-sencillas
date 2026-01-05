@@ -1,28 +1,22 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO PRINCIPAL -->
-  <title>Dashboards en Excel | Control de Ingresos y Gastos | JHS</title>
-  <meta name="description" content="Dashboards en Excel para controlar ingresos y gastos. Modelos claros y personalizados para personas, independientes y pequeños negocios.">
-  <meta name="keywords" content="dashboards Excel, ingresos y gastos, control financiero, Excel Colombia, tablas dinámicas">
-  <meta name="author" content="JHS Servicios en Excel">
+  <!-- SEO principal -->
+  <title>Dashboards en Excel | Control de ingresos y gastos | JHS</title>
+  <meta name="description" content="Dashboards en Excel para controlar ingresos y gastos. Modelos claros y personalizables para personas, independientes y pequeños negocios. ES/EN.">
   <meta name="robots" content="index,follow">
-
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://jhs212.github.io/paginas-web-sencillas/excel/">
 
-  <!-- OPEN GRAPH (REDES SOCIALES) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dashboards en Excel | Control de Ingresos y Gastos">
-  <meta property="og:description" content="Dashboards en Excel claros y personalizados para controlar ingresos y gastos.">
+  <meta property="og:title" content="Dashboards en Excel | Control de ingresos y gastos">
+  <meta property="og:description" content="Dashboards en Excel claros y personalizables para controlar ingresos y gastos. ES/EN.">
   <meta property="og:url" content="https://jhs212.github.io/paginas-web-sencillas/excel/">
   <meta property="og:image" content="https://jhs212.github.io/paginas-web-sencillas/excel/dashboard_design_1.png">
 
-  <!-- ESTILOS -->
   <style>
     :root{
       --brand:#0b5ed7;
@@ -30,10 +24,9 @@
       --muted:#555;
       --border:#e6e6e6;
       --bg:#ffffff;
+      --card:#ffffff;
     }
-
     *{box-sizing:border-box}
-
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
@@ -42,12 +35,15 @@
       line-height:1.55;
     }
 
+    /* Header */
     header{
       background:var(--brand);
       color:#fff;
       padding:14px 0;
+      position:sticky;
+      top:0;
+      z-index:10;
     }
-
     .header-inner{
       max-width:1100px;
       margin:auto;
@@ -57,46 +53,71 @@
       align-items:center;
       gap:12px;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
+      min-width:0;
     }
-
     .brand img{
       height:44px;
       background:#fff;
       padding:4px;
       border-radius:6px;
     }
-
-    .brand strong{
+    .brand-text{min-width:0;}
+    .brand-text strong{
       display:block;
       font-size:18px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
-
-    .brand span{
+    .brand-text span{
       font-size:12px;
       opacity:.9;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
 
-    .wrap{
+    .lang{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex:0 0 auto;
+    }
+    .lang button{
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.45);
+      color:#fff;
+      padding:7px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .lang button[aria-pressed="true"]{
+      background:#fff;
+      color:#0b5ed7;
+      border-color:#fff;
+    }
+
+    /* Layout */
+    main{
       max-width:1100px;
       margin:auto;
-      padding:24px 20px;
+      padding:24px 20px 40px;
     }
-
     .card{
       border:1px solid var(--border);
       border-radius:16px;
       padding:22px;
-      margin-bottom:20px;
+      background:var(--card);
+      margin-bottom:18px;
     }
-
-    h1,h2{margin-top:0}
-
-    .muted{color:var(--muted)}
+    h1,h2{margin:0 0 10px 0;}
+    .muted{color:var(--muted);}
+    ul,ol{margin:8px 0 0 18px;}
 
     .cta{
       display:flex;
@@ -104,172 +125,290 @@
       flex-wrap:wrap;
       margin-top:14px;
     }
-
-    .btn{
+    a.btn{
+      display:inline-block;
       padding:10px 16px;
       border-radius:10px;
       border:1px solid var(--ink);
       text-decoration:none;
       color:var(--ink);
       background:#fff;
-      font-weight:bold;
+      font-weight:700;
     }
-
-    .btn.primary{
+    a.btn.primary{
       background:var(--ink);
       color:#fff;
+      border-color:var(--ink);
     }
 
-    /* MODELOS */
+    /* Modelos (galería) */
     .models{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
       gap:16px;
       margin-top:14px;
     }
-
-    .models figure{
+    figure{
       margin:0;
       border:1px solid var(--border);
       border-radius:14px;
       padding:12px;
+      background:#fff;
     }
-
-    .models img{
+    figure img{
       width:100%;
+      height:auto;
       border-radius:12px;
       border:1px solid var(--border);
+      display:block;
     }
-
-    .models figcaption{
+    figcaption{
       margin-top:10px;
       font-size:14px;
       color:var(--muted);
       text-align:center;
     }
-
-    .models figcaption strong{
+    figcaption strong{
       display:block;
       color:var(--ink);
       margin-bottom:4px;
     }
 
     footer{
+      margin-top:10px;
       text-align:center;
       font-size:13px;
       color:var(--muted);
-      margin-top:30px;
+    }
+
+    @media (max-width: 900px){
+      h1{font-size:24px;}
     }
   </style>
 </head>
 
 <body>
-
 <header>
   <div class="header-inner">
     <div class="brand">
       <img src="logo-jhs.png" alt="JHS Servicios en Excel">
-      <div>
+      <div class="brand-text">
         <strong>Servicios en Excel</strong>
-        <span>Ingresos · Gastos · Dashboards</span>
+        <span>Ingresos · Gastos · Dashboards (ES/EN)</span>
       </div>
+    </div>
+
+    <!-- Botones idioma -->
+    <div class="lang" aria-label="Selector de idioma">
+      <button type="button" id="btnES" aria-pressed="true" onclick="setLang('es')">ES</button>
+      <button type="button" id="btnEN" aria-pressed="false" onclick="setLang('en')">EN</button>
     </div>
   </div>
 </header>
 
-<main class="wrap">
+<main>
+  <!-- ===== ESPAÑOL ===== -->
+  <section id="es">
+    <div class="card">
+      <h1>Dashboards en Excel para controlar ingresos y gastos</h1>
+      <p class="muted">
+        Dashboards claros y sencillos para saber <strong>en qué gasta más</strong> y <strong>en qué gasta menos</strong>,
+        organizados por mes y por categoría. Ideal para <strong>personas</strong>, <strong>independientes</strong> y <strong>pequeños negocios</strong>.
+      </p>
 
-  <!-- HERO -->
-  <section class="card">
-    <h1>Dashboards en Excel para controlar ingresos y gastos</h1>
-    <p class="muted">
-      Diseñamos dashboards claros y fáciles de usar que le permiten saber
-      <strong>en qué gasta más</strong> y <strong>en qué gasta menos</strong>,
-      organizados por mes y por categoría.
-    </p>
+      <div class="cta">
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://wa.me/573168726521?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20dashboards%20en%20Excel%20para%20ingresos%20y%20gastos.%20%C2%BFC%C3%B3mo%20empezamos%3F">
+          Escríbeme por WhatsApp
+        </a>
+        <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
+      </div>
 
-    <div class="cta">
-      <a class="btn primary" target="_blank"
-         href="https://wa.me/573168726521?text=Hola,%20quiero%20información%20sobre%20dashboards%20en%20Excel">
-        Escríbeme por WhatsApp
-      </a>
-      <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
+      <p class="muted" style="margin-top:10px;">
+        Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
+      </p>
     </div>
 
-    <p class="muted" style="margin-top:10px">
-      Pagos: Colombia (Nequi / transferencia). Internacional: PayPal.<br>
-      <strong>Los costos se definen según el alcance y nivel de personalización.</strong>
-    </p>
-  </section>
+    <div class="card">
+      <h2>Modelos de dashboards</h2>
+      <p class="muted">
+        Ejemplos reales. El diseño final se ajusta a sus categorías y necesidades.
+      </p>
 
-  <!-- MODELOS -->
-  <section class="card">
-    <h2>Modelos de dashboards en Excel</h2>
-    <p class="muted">
-      Ejemplos reales de dashboards. El diseño final se ajusta a las categorías y necesidades del cliente.
-    </p>
+      <div class="models">
+        <figure>
+          <a href="dashboard_design_1.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_1.png" alt="Modelo 1 - Dashboard Excel" loading="lazy">
+          </a>
+          <figcaption><strong>Modelo 1</strong>Control general (ingresos, egresos y saldo)</figcaption>
+        </figure>
 
-    <div class="models">
-      <figure>
-        <img src="dashboard_design_1.png" alt="Modelo 1 Dashboard Excel">
-        <figcaption>
-          <strong>Modelo 1</strong>
-          Control general de ingresos y egresos
-        </figcaption>
-      </figure>
+        <figure>
+          <a href="dashboard_design_2.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_2.png" alt="Modelo 2 - Dashboard Excel" loading="lazy">
+          </a>
+          <figcaption><strong>Modelo 2</strong>Resumen por categorías</figcaption>
+        </figure>
 
-      <figure>
-        <img src="dashboard_design_2.png" alt="Modelo 2 Dashboard Excel">
-        <figcaption>
-          <strong>Modelo 2</strong>
-          Análisis por categorías
-        </figcaption>
-      </figure>
+        <figure>
+          <a href="dashboard_design_3.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_3.png" alt="Modelo 3 - Dashboard Excel" loading="lazy">
+          </a>
+          <figcaption><strong>Modelo 3</strong>Comparación mensual y tendencias</figcaption>
+        </figure>
 
-      <figure>
-        <img src="dashboard_design_3.png" alt="Modelo 3 Dashboard Excel">
-        <figcaption>
-          <strong>Modelo 3</strong>
-          Comparación mensual
-        </figcaption>
-      </figure>
+        <figure>
+          <a href="dashboard_design_4.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_4.png" alt="Modelo 4 - Dashboard Excel" loading="lazy">
+          </a>
+          <figcaption><strong>Modelo 4</strong>Dashboard visual completo</figcaption>
+        </figure>
+      </div>
+    </div>
 
-      <figure>
-        <img src="dashboard_design_4.png" alt="Modelo 4 Dashboard Excel">
-        <figcaption>
-          <strong>Modelo 4</strong>
-          Dashboard visual completo
-        </figcaption>
-      </figure>
+    <div class="card">
+      <h2>¿Cómo funciona?</h2>
+      <ol>
+        <li>Usted ingresa los datos en un formulario.</li>
+        <li>El archivo clasifica automáticamente la información.</li>
+        <li>Se generan tablas y gráficos (tablas dinámicas).</li>
+        <li>El dashboard se actualiza automáticamente.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Costos</h2>
+      <p>
+        <strong>No manejamos precios estándar.</strong> El valor se define según el alcance:
+        nivel de personalización, número de categorías y complejidad del archivo.
+        Antes de iniciar, se informa la cotización de forma clara.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Servicio adicional</h2>
+      <p>
+        Ejercicios de matemática financiera en Excel: ecuaciones de valor, amortizaciones, gradientes, VPN, TIR y razones financieras.
+        (No es asesoría financiera ni recomendaciones de inversión).
+      </p>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="card">
-    <h2>¿Cómo funciona el dashboard?</h2>
-    <ol>
-      <li>El usuario ingresa los datos en un formulario.</li>
-      <li>El archivo clasifica automáticamente la información.</li>
-      <li>Se generan tablas y gráficos dinámicos.</li>
-      <li>El dashboard se actualiza automáticamente.</li>
-    </ol>
+  <!-- ===== ENGLISH ===== -->
+  <section id="en" style="display:none;">
+    <div class="card">
+      <h1>Excel dashboards for income & expense tracking</h1>
+      <p class="muted">
+        Clean and simple dashboards to see <strong>where you spend more</strong> and <strong>where you spend less</strong>,
+        organized by month and category. Great for <strong>individuals</strong>, <strong>freelancers</strong>, and <strong>small businesses</strong>.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://wa.me/573168726521?text=Hello%2C%20I%20am%20interested%20in%20Excel%20dashboards%20for%20income%20and%20expenses.%20How%20do%20we%20start%3F">
+          WhatsApp
+        </a>
+        <a class="btn" href="mailto:jhs.com.co@gmail.com">Email</a>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Payments: Colombia (local transfer). International: PayPal (payment link after confirmation).
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Dashboard templates</h2>
+      <p class="muted">
+        Real examples. Final layout can be adjusted based on your categories and needs.
+      </p>
+
+      <div class="models">
+        <figure>
+          <a href="dashboard_design_1.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_1.png" alt="Template 1 - Excel dashboard" loading="lazy">
+          </a>
+          <figcaption><strong>Template 1</strong>General overview (income, expenses, balance)</figcaption>
+        </figure>
+
+        <figure>
+          <a href="dashboard_design_2.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_2.png" alt="Template 2 - Excel dashboard" loading="lazy">
+          </a>
+          <figcaption><strong>Template 2</strong>Category summary</figcaption>
+        </figure>
+
+        <figure>
+          <a href="dashboard_design_3.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_3.png" alt="Template 3 - Excel dashboard" loading="lazy">
+          </a>
+          <figcaption><strong>Template 3</strong>Monthly comparison & trends</figcaption>
+        </figure>
+
+        <figure>
+          <a href="dashboard_design_4.png" target="_blank" rel="noopener">
+            <img src="dashboard_design_4.png" alt="Template 4 - Excel dashboard" loading="lazy">
+          </a>
+          <figcaption><strong>Template 4</strong>Full visual dashboard (premium-style)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>How it works</h2>
+      <ol>
+        <li>You enter your data in a simple form.</li>
+        <li>The file auto-categorizes your records.</li>
+        <li>Pivot tables and charts are generated.</li>
+        <li>The dashboard updates automatically.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Pricing</h2>
+      <p>
+        <strong>No fixed pricing.</strong> Cost depends on scope:
+        customization level, number of categories, and file complexity.
+        We confirm the quote before starting.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Additional service</h2>
+      <p class="muted">
+        Financial math exercises in Excel (NPV, IRR, amortization, gradients, financial ratios). Educational/analytical purposes only.
+      </p>
+    </div>
   </section>
 
-  <!-- SERVICIO ADICIONAL -->
-  <section class="card">
-    <h2>Servicio adicional</h2>
-    <p>
-      Desarrollo de ejercicios de matemática financiera en Excel:
-      amortizaciones, VPN, TIR, gradientes, ecuaciones de valor
-      y razones financieras.
-    </p>
-  </section>
-
+  <footer>
+    © JHS · Excel Dashboards · Contact: jhs.com.co@gmail.com
+  </footer>
 </main>
 
-<footer>
-  © JHS · Dashboards en Excel · Colombia
-</footer>
+<script>
+  function setLang(lang){
+    const es = document.getElementById('es');
+    const en = document.getElementById('en');
+    const btnES = document.getElementById('btnES');
+    const btnEN = document.getElementById('btnEN');
 
+    if(lang === 'en'){
+      es.style.display = 'none';
+      en.style.display = 'block';
+      document.documentElement.lang = 'en';
+      btnES.setAttribute('aria-pressed', 'false');
+      btnEN.setAttribute('aria-pressed', 'true');
+      // (Opcional) actualiza title para el usuario
+      document.title = "Excel dashboards | Income & expense tracking | JHS";
+    } else {
+      en.style.display = 'none';
+      es.style.display = 'block';
+      document.documentElement.lang = 'es';
+      btnES.setAttribute('aria-pressed', 'true');
+      btnEN.setAttribute('aria-pressed', 'false');
+      document.title = "Dashboards en Excel | Control de ingresos y gastos | JHS";
+    }
+  }
+</script>
 </body>
 </html>
