@@ -2,34 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Servicios en Excel | Dashboards de Ingresos y Gastos</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Servicios en Excel: dashboards de ingresos y gastos, control financiero personal y para pequeños negocios. Archivos claros, sencillos y personalizados.">
-  <meta name="keywords" content="Excel, dashboards, ingresos y gastos, control financiero, tablas dinámicas, Excel Colombia">
-  <meta name="author" content="JHS Servicios en Excel">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Servicios en Excel: dashboards de ingresos y gastos claros y fáciles de usar. Ideal para personas, independientes y pequeños negocios.">
+  <meta name="keywords" content="Excel, dashboards, ingresos y gastos, control financiero, pequeños negocios">
+  <meta name="author" content="JHS">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Servicios en Excel | Dashboards financieros">
+  <meta property="og:description" content="Dashboards claros para saber en qué gasta más y en qué gasta menos.">
+  <meta property="og:type" content="website">
 
   <style>
     :root{
       --brand:#0b5ed7;
-      --ink:#111;
-      --muted:#666;
-      --border:#e6e6e6;
-      --bg:#ffffff;
+      --bg:#f8f9fa;
+      --ink:#212529;
+      --muted:#6c757d;
+      --border:#dee2e6;
     }
-
     *{box-sizing:border-box}
-
     body{
       margin:0;
-      font-family:Arial, sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
       background:var(--bg);
       color:var(--ink);
-      line-height:1.6;
+      line-height:1.5;
     }
-
-    /* HEADER */
     header{
       background:var(--brand);
       color:#fff;
@@ -38,7 +39,6 @@
       top:0;
       z-index:10;
     }
-
     .header-inner{
       max-width:1100px;
       margin:auto;
@@ -48,33 +48,23 @@
       align-items:center;
       gap:12px;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
     }
-
     .brand img{
-      height:44px;
+      height:42px;
       background:#fff;
-      padding:4px;
       border-radius:6px;
+      padding:4px;
     }
-
-    .brand-text strong{
-      display:block;
-      font-size:18px;
-    }
-
-    .brand-text span{
-      font-size:12px;
-      opacity:.9;
-    }
+    .brand strong{font-size:18px}
+    .brand span{font-size:12px; opacity:.9}
 
     .lang button{
-      background:#ffffff22;
-      border:1px solid #ffffff55;
+      background:transparent;
+      border:1px solid rgba(255,255,255,.6);
       color:#fff;
       padding:6px 10px;
       border-radius:8px;
@@ -82,7 +72,6 @@
       margin-left:4px;
     }
 
-    /* CONTENT */
     .wrap{
       max-width:1100px;
       margin:auto;
@@ -90,23 +79,22 @@
     }
 
     .card{
+      background:#fff;
       border:1px solid var(--border);
       border-radius:16px;
       padding:22px;
-      margin-bottom:18px;
+      margin-bottom:20px;
     }
 
     h1,h2{margin-top:0}
-
     .muted{color:var(--muted)}
 
     .cta{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:12px;
+      margin-top:14px;
     }
-
     .btn{
       padding:10px 16px;
       border-radius:10px;
@@ -114,31 +102,20 @@
       border:1px solid var(--ink);
       color:var(--ink);
       background:#fff;
+      font-weight:bold;
     }
-
     .btn.primary{
       background:var(--ink);
       color:#fff;
     }
 
-    /* DASHBOARD GALLERY */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:16px;
-    }
-
-    .gallery img{
+    .dashboards img{
       width:100%;
+      max-width:900px;
+      display:block;
+      margin:20px auto;
       border-radius:14px;
       border:1px solid var(--border);
-    }
-
-    footer{
-      text-align:center;
-      padding:20px;
-      font-size:13px;
-      color:var(--muted);
     }
   </style>
 </head>
@@ -148,8 +125,8 @@
 <header>
   <div class="header-inner">
     <div class="brand">
-      <img src="logo-jhs.png" alt="JHS Servicios en Excel">
-      <div class="brand-text">
+      <img src="logo-jhs.png" alt="JHS Logo">
+      <div>
         <strong>Servicios en Excel</strong>
         <span>Ingresos · Gastos · Dashboards</span>
       </div>
@@ -174,19 +151,23 @@
     </p>
 
     <div class="cta">
-      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">Escríbeme por WhatsApp</a>
+      <a class="btn primary" target="_blank"
+         href="https://wa.me/573168726521?text=Hola,%20quiero%20información%20sobre%20los%20dashboards%20en%20Excel">
+        Escríbeme por WhatsApp
+      </a>
       <a class="btn" href="mailto:jhs.com.co@gmail.com">Enviar correo</a>
     </div>
 
     <p class="muted" style="margin-top:10px">
-      Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).
+      Pagos: Colombia (Nequi / transferencia). Internacional: PayPal (link de pago).  
+      <strong>Los costos se definen según el alcance del archivo.</strong>
     </p>
   </div>
 
   <div class="card">
     <h2>¿Qué hacemos?</h2>
     <ul>
-      <li>Dashboards de ingresos y egresos (personas, independientes y pequeños negocios).</li>
+      <li>Dashboards de ingresos y gastos (personas, independientes y pequeños negocios).</li>
       <li>Organización y limpieza de archivos en Excel.</li>
       <li>Ajustes y mejoras en archivos existentes.</li>
     </ul>
@@ -195,7 +176,7 @@
   <div class="card">
     <h2>¿Cómo funciona?</h2>
     <ol>
-      <li>Usted registra los datos en un formulario.</li>
+      <li>Usted ingresa los datos en un formulario.</li>
       <li>El archivo clasifica automáticamente la información.</li>
       <li>Se generan tablas y gráficos.</li>
       <li>El dashboard se actualiza solo.</li>
@@ -204,24 +185,19 @@
 
   <div class="card">
     <h2>Ejemplos de dashboards</h2>
-    <p class="muted">
-      Diseños reales en Excel. El cliente puede solicitar ajustes de colores y categorías
-      sin tocar fórmulas.
-    </p>
-
-    <div class="gallery">
+    <div class="dashboards">
       <img src="dashboard_design_1.png" alt="Dashboard Excel 1">
       <img src="dashboard_design_2.png" alt="Dashboard Excel 2">
       <img src="dashboard_design_3.png" alt="Dashboard Excel 3">
+      <img src="dashboard_design_4.png" alt="Dashboard Excel 4">
     </div>
   </div>
 
   <div class="card">
-    <h2>Costos</h2>
+    <h2>Servicio adicional</h2>
     <p>
-      El valor del trabajo depende del nivel de personalización, número de categorías
-      y complejidad del archivo.  
-      <strong>No manejamos precios estándar</strong>: se cotiza de forma clara antes de iniciar.
+      Ejercicios de matemática financiera: amortizaciones, VPN, TIR, gradientes,
+      ecuaciones de valor y razones financieras en Excel.
     </p>
   </div>
 
@@ -233,28 +209,31 @@
   <div class="card">
     <h1>Excel services for income and expense tracking</h1>
     <p class="muted">
-      Simple and clear dashboards to understand where your money goes.
+      Simple dashboards that clearly show where your money goes.
     </p>
 
     <div class="cta">
-      <a class="btn primary" href="https://wa.me/573168726521" target="_blank">WhatsApp</a>
+      <a class="btn primary" target="_blank"
+         href="https://wa.me/573168726521?text=Hello,%20I%20want%20information%20about%20Excel%20dashboards">
+        WhatsApp
+      </a>
       <a class="btn" href="mailto:jhs.com.co@gmail.com">Email</a>
     </div>
+
+    <p class="muted" style="margin-top:10px">
+      Pricing depends on the scope of the file.
+    </p>
   </div>
 
 </div>
 
 </div>
 
-<footer>
-  © JHS Servicios en Excel · Dashboards personalizados en Excel
-</footer>
-
 <script>
-function setLang(lang){
-  document.getElementById('es').style.display = lang==='es'?'block':'none';
-  document.getElementById('en').style.display = lang==='en'?'block':'none';
-}
+  function setLang(lang){
+    document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  }
 </script>
 
 </body>
