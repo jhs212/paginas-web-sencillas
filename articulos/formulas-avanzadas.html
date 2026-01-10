@@ -1,1 +1,106 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fórmulas Avanzadas en Excel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #004f7a;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+    }
+    h1 {
+      color: #004f7a;
+    }
+    h2 {
+      color: #006699;
+      margin-top: 2rem;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #28a745;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fórmulas Avanzadas en Excel</h1>
+    <p>Potencia tus hojas de cálculo con funciones inteligentes</p>
+  </header>
+
+  <div class="container">
+
+    <p>Excel es una herramienta poderosa, pero su verdadero potencial se revela cuando usas funciones combinadas y fórmulas avanzadas. En este artículo te muestro algunas de las más útiles:</p>
+
+    <h2>1. <code>BUSCARV</code> con coincidencia exacta</h2>
+    <p>Busca valores verticalmente en una tabla:</p>
+    <code>=BUSCARV("Producto A", A2:B10, 2, FALSO)</code>
+
+    <h2>2. <code>ÍNDICE</code> + <code>COINCIDIR</code></h2>
+    <p>Una combinación más flexible que <code>BUSCARV</code>:</p>
+    <code>=ÍNDICE(B2:B10, COINCIDIR("Producto A", A2:A10, 0))</code>
+
+    <h2>3. <code>SI.CONJUNTO</code></h2>
+    <p>Evalúa múltiples condiciones:</p>
+    <code>=SI.CONJUNTO(A2>90, "Excelente", A2>70, "Bueno", A2>50, "Aceptable", A2<=50, "Insuficiente")</code>
+
+    <h2>4. Fórmulas matriciales</h2>
+    <p>Permiten cálculos complejos con múltiples criterios (requiere presionar <strong>Ctrl+Shift+Enter</strong> en versiones antiguas):</p>
+    <code>{=SUMA((A2:A10="Zona 1")*(B2:B10>100)*(C2:C10))}</code>
+
+    <h2>5. <code>FILTRAR</code> (Excel 365)</h2>
+    <p>Extrae datos que cumplen con condiciones:</p>
+    <code>=FILTRAR(A2:C100, B2:B100="Activo")</code>
+
+    <h2>6. <code>UNIQUE</code> (únicos)</h2>
+    <p>Lista elementos únicos automáticamente:</p>
+    <code>=UNIQUE(A2:A100)</code>
+
+    <a class="button" href="index.html">← Volver a artículos</a>
+
+  </div>
+
+  <footer>
+    © 2026 JHS | Artículos de apoyo en Excel y automatización.
+  </footer>
+
+</body>
+</html>
