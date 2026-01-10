@@ -1,92 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artículos Técnicos - Excel y Más</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <meta charset="UTF-8">
+  <title>Artículos sobre Excel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
-      background: #f8f8f8;
+      text-align: center;
     }
     header {
-      background-color: #004f7a;
+      background-color: #1976d2;
       color: white;
       padding: 1.5rem;
-      text-align: center;
     }
     h1 {
       margin: 0;
-      font-size: 1.8rem;
     }
-    .container {
-      padding: 2rem;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 2rem auto;
+      max-width: 500px;
     }
-    .card {
+    li {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
       padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #004f7a;
-    }
-    .card p {
-      flex-grow: 1;
-      font-size: 0.95rem;
-    }
-    .card a {
+    a {
       text-decoration: none;
-      background: #28a745;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      text-align: center;
-      display: inline-block;
-      margin-top: 1rem;
+      color: #1976d2;
       font-weight: bold;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     footer {
-      text-align: center;
-      padding: 1rem;
+      margin-top: 3rem;
       font-size: 0.85rem;
-      color: #888;
+      color: #777;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Artículos Técnicos - Excel y Automatización</h1>
-    <p>Conocimientos prácticos para resolver problemas reales</p>
+    <h1>Artículos sobre Excel</h1>
+    <p>Automatización, análisis y visualización</p>
   </header>
 
-  <main class="container">
-    <!-- Artículo 1 -->
-    <div class="card">
-      <h2>Fórmulas avanzadas en Excel</h2>
-      <p>Exploramos funciones como BUSCARV, ÍNDICE + COINCIDIR, SI.CONJUNTO, y fórmulas matriciales para automatizar cálculos complejos.</p>
-      <a href="formulas-avanzadas.html">Leer artículo</a>
-    </div>
-
-    <!-- Más artículos puedes agregarlos aquí copiando la estructura -->
-  </main>
+  <ul>
+    <li><a href="formulas-avanzadas.html">Fórmulas avanzadas en Excel</a></li>
+    <li><a href="dashboards.html">Diseño de Dashboards con Excel</a></li>
+    <li><a href="tablas-dinamicas.html">Tablas Dinámicas: Guía práctica</a></li>
+  </ul>
 
   <footer>
-    © 2026 JHS | Artículos educativos sobre Excel y más.
+    © 2026 JHS | Aprende a trabajar mejor con Excel.
   </footer>
-
 </body>
 </html>
