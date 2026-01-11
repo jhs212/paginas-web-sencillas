@@ -2,21 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboards en Excel | Visualización Profesional</title>
+  <title>Dashboards en Excel | Cómo diseñar paneles que sí funcionan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aprende qué es un dashboard en Excel, qué elementos debe tener y cómo crear reportes visuales claros y profesionales.">
+
+  <meta name="description" content="Guía profesional sobre dashboards en Excel: qué son, por qué fallan muchos, cómo diseñarlos correctamente y cómo validar que realmente ayudan a tomar decisiones.">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
+      line-height: 1.7;
     }
 
     header {
       background: #0d6efd;
       color: white;
-      padding: 50px 20px;
+      padding: 55px 20px;
       text-align: center;
     }
 
@@ -27,37 +29,60 @@
     }
 
     section {
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       background: white;
-      padding: 35px;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h2 {
       color: #0d6efd;
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-top: 25px;
     }
 
     ul {
-      line-height: 1.8;
+      margin-left: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 8px;
     }
 
     img.dashboard {
       max-width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      margin: 25px 0;
+      margin: 30px 0;
+    }
+
+    .cta {
+      background: #eef4ff;
+      border-left: 5px solid #0d6efd;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 6px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 20px;
+      margin-top: 20px;
+      padding: 14px 24px;
       background: #0d6efd;
       color: white;
       text-decoration: none;
       border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: #198754;
+      margin-right: 10px;
     }
 
     footer {
@@ -71,8 +96,120 @@
 
 <body>
 
-<!-- HEADER ÚNICO (AQUÍ ESTABA EL PROBLEMA) -->
 <header>
   <img src="logo-jhs.png" alt="Logo JHS">
   <h1>Dashboards en Excel</h1>
-  <p>Visualiza tus datos de form
+  <p>Cómo diseñar paneles que realmente ayudan a tomar decisiones</p>
+</header>
+
+<section>
+
+  <p>
+    Un <strong>dashboard en Excel</strong> no es simplemente una hoja con gráficos.
+    Es una herramienta de análisis diseñada para responder preguntas concretas
+    y apoyar la toma de decisiones en tiempo limitado.
+  </p>
+
+  <p>
+    En la práctica, muchos dashboards <strong>fallan</strong> no por Excel,
+    sino por un mal enfoque de diseño y análisis.
+    Aquí vamos a analizar el problema desde la raíz.
+  </p>
+
+  <h2>Ingeniería inversa: ¿por qué muchos dashboards no sirven?</h2>
+
+  <p>
+    Si analizamos dashboards que no funcionan, casi siempre encontramos
+    uno o varios de estos errores:
+  </p>
+
+  <ul>
+    <li>Demasiados gráficos sin jerarquía visual.</li>
+    <li>Indicadores que no responden a ninguna decisión concreta.</li>
+    <li>Datos sin filtrar ni resumir correctamente.</li>
+    <li>Diseño estético pero sin lógica de negocio.</li>
+  </ul>
+
+  <p>
+    En otras palabras: el dashboard se ve bonito,
+    pero <strong>no responde preguntas</strong>.
+  </p>
+
+  <h2>¿Qué debe hacer realmente un buen dashboard?</h2>
+
+  <p>
+    Un dashboard bien diseñado debe cumplir una función clara:
+  </p>
+
+  <ul>
+    <li>Mostrar el estado actual del negocio o proceso.</li>
+    <li>Permitir detectar desviaciones rápidamente.</li>
+    <li>Facilitar comparaciones (periodos, metas, tendencias).</li>
+    <li>Reducir el tiempo de análisis.</li>
+  </ul>
+
+  <h2>Elementos técnicos clave (comprobación)</h2>
+
+  <p>
+    Desde un punto de vista técnico, un dashboard sólido en Excel
+    debe cumplir con las siguientes comprobaciones:
+  </p>
+
+  <ul class="checklist">
+    <li>✔️ Datos estructurados en tablas (no rangos sueltos).</li>
+    <li>✔️ Uso de tablas dinámicas para agregación.</li>
+    <li>✔️ Segmentadores para filtrar sin errores.</li>
+    <li>✔️ Fórmulas robustas (SUMAR.SI.CONJUNTO, CONTAR.SI).</li>
+    <li>✔️ Separación clara entre datos, cálculos y visualización.</li>
+  </ul>
+
+  <h2>Funciones de Excel más utilizadas en dashboards</h2>
+
+  <ul>
+    <li>SI, CONTAR.SI, SUMAR.SI.CONJUNTO</li>
+    <li>BUSCARX o INDICE + COINCIDIR</li>
+    <li>FILTRAR, UNICOS (Excel 365)</li>
+    <li>Tablas y gráficos dinámicos</li>
+  </ul>
+
+  <h2>Ejemplo visual de un dashboard en Excel</h2>
+
+  <p>
+    A continuación se muestra un ejemplo de dashboard donde los indicadores,
+    gráficos y filtros están alineados con un objetivo de análisis concreto.
+  </p>
+
+  <img
+    src="dashboard.png"
+    alt="Ejemplo de dashboard en Excel con indicadores y gráficos"
+    class="dashboard"
+  >
+
+  <h2>Conclusión técnica</h2>
+
+  <p>
+    Un dashboard no se diseña empezando por los gráficos,
+    sino por las <strong>preguntas que se quieren responder</strong>.
+    Excel es solo la herramienta; el valor está en el análisis.
+  </p>
+
+  <div class="cta">
+    <h3>¿Necesitas un dashboard profesional en Excel?</h3>
+    <p>
+      Si quieres un dashboard bien estructurado, con lógica de negocio,
+      validaciones técnicas y adaptado a tus datos reales,
+      puedo ayudarte a desarrollarlo de forma profesional.
+    </p>
+
+    <a class="btn secondary" href="../excel/">Ver servicios de trabajos en Excel</a>
+    <a class="btn" href="index.html">← Volver al índice de artículos</a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 JHS | Artículos profesionales sobre Excel
+</footer>
+
+</body>
+</html>
