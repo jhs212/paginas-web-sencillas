@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículos sobre Excel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1.5rem 0;
       text-align: center;
     }
-    header {
-      background-color: #1976d2;
-      color: white;
-      padding: 1.5rem;
+
+    header img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
-    h1 {
-      margin: 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 2rem auto;
-      max-width: 500px;
-    }
-    li {
-      background: white;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    a {
+
+    .article-link {
+      background-color: white;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 1.2rem;
+      color: #0d6efd;
       text-decoration: none;
-      color: #1976d2;
-      font-weight: bold;
+      width: 100%;
+      max-width: 500px;
+      transition: transform 0.2s ease-in-out;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .article-link:hover {
+      transform: scale(1.03);
     }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #777;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
     }
   </style>
 </head>
+
 <body>
   <header>
+    <img src="/logo-jhs.png" alt="Logo JHS">
     <h1>Artículos sobre Excel</h1>
     <p>Automatización, análisis y visualización</p>
   </header>
 
-  <ul>
-    <li><a href="formulas-avanzadas.html">Fórmulas avanzadas en Excel</a></li>
-    <li><a href="dashboards.html">Diseño de Dashboards con Excel</a></li>
-    <li><a href="tablas-dinamicas.html">Tablas Dinámicas: Guía práctica</a></li>
-  </ul>
+  <div class="container">
+    <a class="article-link" href="/articulos/formulas-avanzadas.html">Fórmulas avanzadas en Excel</a>
+    <a class="article-link" href="/articulos/dashboards.html">Diseño de Dashboards con Excel</a>
+    <a class="article-link" href="/articulos/tablas-dinamicas.html">Tablas Dinámicas: Guía práctica</a>
+    <a class="article-link" href="/excel/index.html">Volver a página Excel</a>
+  </div>
 
   <footer>
     © 2026 JHS | Aprende a trabajar mejor con Excel.
   </footer>
 </body>
+
 </html>
