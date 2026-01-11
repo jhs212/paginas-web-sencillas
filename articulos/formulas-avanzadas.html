@@ -2,58 +2,164 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Fórmulas Avanzadas en Excel</title>
+  <title>Fórmulas Avanzadas en Excel | Automatización con criterio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aprende fórmulas avanzadas de Excel para automatizar cálculos y mejorar tu productividad.">
+
+  <meta name="description" content="Guía profesional sobre fórmulas avanzadas en Excel: cómo usarlas correctamente, por qué muchas fallan y cómo validar resultados confiables para automatizar procesos.">
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
-    header { background:#198754; color:#fff; padding:40px 20px; text-align:center; }
-    section { max-width:900px; margin:30px auto; background:#fff; padding:30px; border-radius:10px; }
-    h2 { color:#198754; }
-    code { background:#eee; padding:4px 6px; border-radius:4px; }
-    ul { line-height:1.8; }
-    .btn { display:inline-block; margin-top:20px; padding:12px 20px; background:#198754; color:#fff; text-decoration:none; border-radius:6px; }
-    footer { text-align:center; padding:20px; color:#666; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #198754;
+      color: white;
+      padding: 55px 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 55px;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #198754;
+      margin-top: 40px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    code {
+      background: #f1f1f1;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .checklist li {
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      background: #eaf7ef;
+      border-left: 5px solid #198754;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #198754;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: #0d6efd;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo-jhs.png" alt="Logo JHS" height="45">
+  <img src="logo-jhs.png" alt="Logo JHS">
   <h1>Fórmulas Avanzadas en Excel</h1>
-  <p>Automatiza cálculos y ahorra tiempo</p>
+  <p>Automatización con lógica, control y validación</p>
 </header>
 
 <section>
+
   <p>
-    Las <strong>fórmulas avanzadas en Excel</strong> permiten realizar análisis complejos y automatizar
-    procesos repetitivos.
+    Las <strong>fórmulas avanzadas en Excel</strong> permiten automatizar cálculos,
+    eliminar trabajo manual y reducir errores. Sin embargo, mal diseñadas,
+    pueden producir resultados incorrectos sin que el usuario lo note.
   </p>
 
-  <h2>Funciones más utilizadas</h2>
+  <p>
+    En este artículo abordamos el tema desde un enfoque profesional:
+    <strong>no solo cómo escribir fórmulas</strong>, sino cómo diseñarlas,
+    validarlas y mantenerlas confiables.
+  </p>
+
+  <h2>Ingeniería inversa: ¿por qué muchas fórmulas “no cuadran”?</h2>
+
+  <p>
+    Cuando una hoja “empieza a fallar”, casi nunca es por Excel.
+    Normalmente ocurre por uno o varios de estos errores:
+  </p>
+
   <ul>
-    <li><code>BUSCARX()</code></li>
-    <li><code>INDICE() + COINCIDIR()</code></li>
-    <li><code>SI.CONJUNTO()</code></li>
+    <li>Referencias relativas mal controladas.</li>
+    <li>Datos mezclados (texto con números).</li>
+    <li>Fórmulas copiadas sin validación.</li>
+    <li>Uso excesivo de fórmulas anidadas sin estructura.</li>
+  </ul>
+
+  <p>
+    El problema no es la complejidad, sino la falta de criterio.
+  </p>
+
+  <h2>Principio clave: una fórmula debe ser verificable</h2>
+
+  <p>
+    Una fórmula profesional debe cumplir tres condiciones:
+  </p>
+
+  <ul class="checklist">
+    <li>✔️ Entendible (aunque sea compleja).</li>
+    <li>✔️ Verificable contra un cálculo manual.</li>
+    <li>✔️ Robusta ante cambios en los datos.</li>
+  </ul>
+
+  <h2>Funciones avanzadas más utilizadas</h2>
+
+  <ul>
+    <li><code>BUSCARX()</code> (o <code>INDICE() + COINCIDIR()</code>)</li>
     <li><code>SUMAR.SI.CONJUNTO()</code></li>
-    <li><code>FILTRAR()</code></li>
+    <li><code>CONTAR.SI.CONJUNTO()</code></li>
+    <li><code>SI.CONJUNTO()</code></li>
+    <li><code>FILTRAR()</code>, <code>UNICOS()</code></li>
   </ul>
 
-  <h2>¿Por qué usarlas?</h2>
-  <ul>
-    <li>Reducen errores manuales.</li>
-    <li>Mejoran la productividad.</li>
-    <li>Permiten crear modelos automáticos.</li>
-  </ul>
+  <h2>Comprobaciones técnicas obligatorias</h2>
 
-  <a class="btn" href="index.html">← Volver al índice de artículos</a>
-</section>
+  <p>
+    Antes de confiar en una hoja automatizada, se deben realizar
+    al menos las siguientes comprobaciones:
+  </p>
 
-<footer>
-  © 2026 JHS | Excel aplicado a la vida real
-</footer>
-
-</body>
-</html>
+  <ul class="checklist">
+    <li>✔️ Comparar resultados con cálculos manuales.</li>
+    <li>✔️ Probar valores extremos (cero, vacíos, duplicados).</li>
+    <li>✔️ Validar referencias absolutas y relativas.</li>
