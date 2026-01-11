@@ -2,65 +2,200 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Tablas Dinámicas en Excel | Guía Práctica</title>
+  <title>Tablas Dinámicas en Excel | Análisis correcto de datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Guía práctica para aprender a usar tablas dinámicas en Excel y analizar datos de forma rápida y eficiente.">
+
+  <meta name="description" content="Guía profesional sobre tablas dinámicas en Excel: qué son, por qué fallan muchas, cómo construirlas correctamente y cómo validar que los resultados sean confiables.">
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
-    header { background:#6f2da8; color:#fff; padding:40px 20px; text-align:center; }
-    section { max-width:900px; margin:30px auto; background:#fff; padding:30px; border-radius:10px; }
-    h2 { color:#6f2da8; }
-    ol, ul { line-height:1.8; }
-    img { max-width:100%; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.15); margin:20px 0; }
-    .btn { display:inline-block; margin-top:20px; padding:12px 20px; background:#6f2da8; color:#fff; text-decoration:none; border-radius:6px; }
-    footer { text-align:center; padding:20px; color:#666; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #6f2da8;
+      color: white;
+      padding: 55px 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 55px;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #6f2da8;
+      margin-top: 40px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 8px;
+    }
+
+    img.tabla {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin: 30px 0;
+    }
+
+    .cta {
+      background: #f3ecfa;
+      border-left: 5px solid #6f2da8;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: #6f2da8;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: #198754;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
-<header style="background:#0d6efd; color:white; padding:40px 20px; text-align:center;">
-  <img src="logo-jhs.png" alt="Logo JHS" style="height:50px; display:block; margin:0 auto 10px auto;">
-  <h1>Artículos sobre Excel</h1>
-  <p>Automatización, análisis y visualización</p>
-</header>
 
 <header>
-  <img src="logo-jhs.png" alt="Logo JHS" height="45">
+  <img src="logo-jhs.png" alt="Logo JHS">
   <h1>Tablas Dinámicas en Excel</h1>
-  <p>Analiza y resume tus datos en segundos</p>
+  <p>Cómo analizar datos sin errores y con criterio</p>
 </header>
 
 <section>
+
   <p>
-    Las <strong>tablas dinámicas</strong> permiten analizar grandes volúmenes de datos de forma rápida,
-    flexible e interactiva.
+    Las <strong>tablas dinámicas en Excel</strong> son una de las herramientas más potentes
+    para analizar grandes volúmenes de datos. Sin embargo, también son una de las
+    más mal utilizadas.
   </p>
 
-  <h2>¿Qué puedes hacer con una tabla dinámica?</h2>
+  <p>
+    En este artículo vamos a analizar <strong>desde la raíz</strong> qué hace que una tabla
+    dinámica sea confiable o completamente engañosa.
+  </p>
+
+  <h2>Ingeniería inversa: ¿por qué muchas tablas dinámicas dan malos resultados?</h2>
+
+  <p>
+    Cuando una tabla dinámica “no cuadra”, casi siempre el problema no es Excel,
+    sino el diseño de los datos de origen.
+  </p>
+
   <ul>
-    <li>Resumir datos por categorías o fechas.</li>
-    <li>Filtrar y agrupar información.</li>
-    <li>Crear reportes dinámicos.</li>
-    <li>Usar segmentadores para mejorar la experiencia.</li>
+    <li>Datos sin estructura (celdas combinadas, totales incluidos).</li>
+    <li>Fechas y números tratados como texto.</li>
+    <li>Duplicados no controlados.</li>
+    <li>Campos mal definidos (mezcla de categorías).</li>
   </ul>
 
-  <h2>Pasos para crear una tabla dinámica</h2>
+  <p>
+    El error más común es confiar en el resultado sin validar el origen.
+  </p>
+
+  <h2>¿Qué debe cumplir un buen origen de datos?</h2>
+
+  <ul class="checklist">
+    <li>✔️ Una fila = un registro.</li>
+    <li>✔️ Una columna = una variable.</li>
+    <li>✔️ Sin filas de totales.</li>
+    <li>✔️ Sin celdas combinadas.</li>
+    <li>✔️ Tipos de datos correctos.</li>
+  </ul>
+
+  <h2>Proceso correcto para construir una tabla dinámica</h2>
+
   <ol>
-    <li>Selecciona tu tabla de datos.</li>
-    <li>Ve a <strong>Insertar → Tabla dinámica</strong>.</li>
-    <li>Arrastra campos a Filas, Columnas y Valores.</li>
-    <li>Personaliza y analiza.</li>
+    <li>Validar y limpiar los datos.</li>
+    <li>Convertir el rango en una tabla de Excel.</li>
+    <li>Insertar la tabla dinámica.</li>
+    <li>Definir correctamente Filas, Columnas y Valores.</li>
+    <li>Validar resultados contra totales conocidos.</li>
   </ol>
 
-  <h2>Ejemplo de tabla dinámica</h2>
-  <img src="tablas-dinamicas.png" alt="Ejemplo de tabla dinámica en Excel">
+  <h2>Comprobaciones técnicas obligatorias</h2>
 
-  <a class="btn" href="index.html">← Volver al índice de artículos</a>
+  <ul class="checklist">
+    <li>✔️ ¿Los totales coinciden con la suma original?</li>
+    <li>✔️ ¿Los filtros no eliminan registros sin querer?</li>
+    <li>✔️ ¿Los campos de fecha están agrupados correctamente?</li>
+    <li>✔️ ¿No hay doble conteo?</li>
+  </ul>
+
+  <h2>Ejemplo de tabla dinámica</h2>
+
+  <p>
+    En el siguiente ejemplo se observa una tabla dinámica utilizada para resumir
+    información de ventas, permitiendo analizar rápidamente resultados por categoría
+    y periodo.
+  </p>
+
+  <img
+    src="tablas-dinamicas.png"
+    alt="Ejemplo de tabla dinámica en Excel"
+    class="tabla"
+  >
+
+  <h2>Conclusión técnica</h2>
+
+  <p>
+    Una tabla dinámica bien construida es una herramienta de análisis confiable.
+    Una mal diseñada puede llevar a decisiones equivocadas.
+    El valor no está en el clic, sino en el criterio.
+  </p>
+
+  <div class="cta">
+    <h3>¿Necesitas analizar tus datos correctamente?</h3>
+    <p>
+      Si trabajas con reportes, ventas, finanzas o inventarios y necesitas
+      tablas dinámicas confiables, limpias y bien estructuradas,
+      puedo ayudarte a construirlas y validarlas profesionalmente.
+    </p>
+
+    <a class="btn secondary" href="../excel/">Ver servicios de trabajos en Excel</a>
+    <a class="btn" href="index.html">← Volver al índice de artículos</a>
+  </div>
+
 </section>
 
 <footer>
-  © 2026 JHS | Aprende Excel de forma práctica
+  © 2026 JHS | Artículos profesionales sobre Excel
 </footer>
 
 </body>
