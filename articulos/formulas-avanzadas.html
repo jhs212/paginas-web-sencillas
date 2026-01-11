@@ -1,106 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Fórmulas Avanzadas en Excel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende fórmulas avanzadas de Excel para automatizar cálculos y mejorar tu productividad.">
+
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #004f7a;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: white;
-    }
-    h1 {
-      color: #004f7a;
-    }
-    h2 {
-      color: #006699;
-      margin-top: 2rem;
-    }
-    code {
-      background-color: #eee;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 0.95rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 3rem;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      background: #28a745;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    body { margin:0; font-family: Arial, sans-serif; background:#f4f4f4; }
+    header { background:#198754; color:#fff; padding:40px 20px; text-align:center; }
+    section { max-width:900px; margin:30px auto; background:#fff; padding:30px; border-radius:10px; }
+    h2 { color:#198754; }
+    code { background:#eee; padding:4px 6px; border-radius:4px; }
+    ul { line-height:1.8; }
+    .btn { display:inline-block; margin-top:20px; padding:12px 20px; background:#198754; color:#fff; text-decoration:none; border-radius:6px; }
+    footer { text-align:center; padding:20px; color:#666; }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Fórmulas Avanzadas en Excel</h1>
-    <p>Potencia tus hojas de cálculo con funciones inteligentes</p>
-  </header>
+<header>
+  <img src="logo-jhs.png" alt="Logo JHS" height="45">
+  <h1>Fórmulas Avanzadas en Excel</h1>
+  <p>Automatiza cálculos y ahorra tiempo</p>
+</header>
 
-  <div class="container">
+<section>
+  <p>
+    Las <strong>fórmulas avanzadas en Excel</strong> permiten realizar análisis complejos y automatizar
+    procesos repetitivos.
+  </p>
 
-    <p>Excel es una herramienta poderosa, pero su verdadero potencial se revela cuando usas funciones combinadas y fórmulas avanzadas. En este artículo te muestro algunas de las más útiles:</p>
+  <h2>Funciones más utilizadas</h2>
+  <ul>
+    <li><code>BUSCARX()</code></li>
+    <li><code>INDICE() + COINCIDIR()</code></li>
+    <li><code>SI.CONJUNTO()</code></li>
+    <li><code>SUMAR.SI.CONJUNTO()</code></li>
+    <li><code>FILTRAR()</code></li>
+  </ul>
 
-    <h2>1. <code>BUSCARV</code> con coincidencia exacta</h2>
-    <p>Busca valores verticalmente en una tabla:</p>
-    <code>=BUSCARV("Producto A", A2:B10, 2, FALSO)</code>
+  <h2>¿Por qué usarlas?</h2>
+  <ul>
+    <li>Reducen errores manuales.</li>
+    <li>Mejoran la productividad.</li>
+    <li>Permiten crear modelos automáticos.</li>
+  </ul>
 
-    <h2>2. <code>ÍNDICE</code> + <code>COINCIDIR</code></h2>
-    <p>Una combinación más flexible que <code>BUSCARV</code>:</p>
-    <code>=ÍNDICE(B2:B10, COINCIDIR("Producto A", A2:A10, 0))</code>
+  <a class="btn" href="index.html">← Volver al índice de artículos</a>
+</section>
 
-    <h2>3. <code>SI.CONJUNTO</code></h2>
-    <p>Evalúa múltiples condiciones:</p>
-    <code>=SI.CONJUNTO(A2>90, "Excelente", A2>70, "Bueno", A2>50, "Aceptable", A2<=50, "Insuficiente")</code>
-
-    <h2>4. Fórmulas matriciales</h2>
-    <p>Permiten cálculos complejos con múltiples criterios (requiere presionar <strong>Ctrl+Shift+Enter</strong> en versiones antiguas):</p>
-    <code>{=SUMA((A2:A10="Zona 1")*(B2:B10>100)*(C2:C10))}</code>
-
-    <h2>5. <code>FILTRAR</code> (Excel 365)</h2>
-    <p>Extrae datos que cumplen con condiciones:</p>
-    <code>=FILTRAR(A2:C100, B2:B100="Activo")</code>
-
-    <h2>6. <code>UNIQUE</code> (únicos)</h2>
-    <p>Lista elementos únicos automáticamente:</p>
-    <code>=UNIQUE(A2:A100)</code>
-
-    <a class="button" href="index.html">← Volver a artículos</a>
-
-  </div>
-
-  <footer>
-    © 2026 JHS | Artículos de apoyo en Excel y automatización.
-  </footer>
+<footer>
+  © 2026 JHS | Excel aplicado a la vida real
+</footer>
 
 </body>
 </html>
