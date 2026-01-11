@@ -1,266 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trabajos en Excel | Excel Work | JHS Services SAS</title>
-  <meta name="description" content="Dashboards, reportes automáticos y automatización de Excel para empresas, profesionales y estudiantes.">
+  <meta charset="UTF-8">
+  <title>Trabajos en Excel | Dashboards, Tablas Dinámicas y Automatización</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Servicios profesionales de trabajos en Excel: dashboards, tablas dinámicas, reportes automáticos y corrección de archivos. Soluciones claras y confiables.">
+
   <style>
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #0f172a;
-      background: #ffffff;
-      line-height: 1.5;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      line-height: 1.6;
     }
-    a { text-decoration: none; }
+
     header {
-      background: #005f6b;
-      color: #ffffff;
-      padding: 14px 20px;
+      background: #0a5c66;
+      color: white;
+      padding: 20px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+
+    header img {
+      height: 45px;
     }
-    .brand img {
-      height: 55px;
-      background: #ffffff;
-      padding: 4px;
-      border-radius: 8px;
+
+    .hero {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
     }
-    nav a {
-      color: #ffffff;
-      margin-left: 15px;
-      font-weight: bold;
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #083c42;
     }
-    .language-toggle {
-      cursor: pointer;
-      background: #ffffff;
-      color: #005f6b;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.9rem;
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto 15px auto;
+      font-size: 1.1rem;
     }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 25px 15px 90px;
+
+    .hero .cta {
+      margin-top: 25px;
     }
-    h1 { font-size: 28px; margin-bottom: 10px; }
-    h2 { margin-top: 30px; color: #005f6b; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 15px;
-    }
-    @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-    .card div { padding: 12px 14px; }
+
     .btn {
       display: inline-block;
-      padding: 12px 16px;
-      border-radius: 10px;
+      background: #25d366;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.05rem;
       font-weight: bold;
-      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 8px;
     }
-    .btn-wa {
-      background: #25D366;
-      color: #062b14;
+
+    .trust {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #444;
     }
+
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #0a5c66;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #e9ecef;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
     .whatsapp {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #25D366;
-      color: #062b14;
-      padding: 14px 18px;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 18px;
       border-radius: 50px;
       font-weight: bold;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-      z-index: 999;
-    }
-    footer {
-      background: #004b50;
-      color: #ffffff;
-      text-align: center;
-      padding: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="brand">
-      <img src="logo-jhs.png" alt="JHS Services SAS">
-      <strong>JHS Services SAS</strong>
+
+<header>
+  <img src="../logo-jhs.png" alt="JHS Services SAS">
+</header>
+
+<div class="hero">
+  <h1>Trabajos profesionales en Excel</h1>
+  <p>
+    Dashboards, tablas dinámicas y automatización para que analices tus datos
+    <strong>sin errores</strong> y ahorres tiempo.
+  </p>
+  <p>
+    Soluciones claras en Excel para empresas, profesionales y estudiantes.
+  </p>
+
+  <div class="cta">
+    <a class="btn" href="https://wa.me/573168726521" target="_blank">
+      📲 Solicitar trabajo en Excel por WhatsApp
+    </a>
+  </div>
+
+  <div class="trust">
+    ✔ Dashboards claros y funcionales &nbsp;&nbsp;|&nbsp;&nbsp;
+    ✔ Corrección de archivos con errores &nbsp;&nbsp;|&nbsp;&nbsp;
+    ✔ Automatización confiable
+  </div>
+</div>
+
+<section>
+  <h2>¿Qué servicios ofrecemos?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="dashboard1.png" alt="Dashboard en Excel">
+      <h3>Dashboards en Excel</h3>
+      <p>Visualización clara de indicadores, ingresos, gastos y resultados clave.</p>
     </div>
-    <div class="language-toggle" onclick="toggleLanguage()">
-      <span id="flag">🇬🇧</span>
-      <span id="lang-label">English</span>
+
+    <div class="card">
+      <img src="tablas.png" alt="Tablas dinámicas en Excel">
+      <h3>Tablas dinámicas</h3>
+      <p>Análisis rápido y confiable de grandes volúmenes de información.</p>
     </div>
-  </header>
 
-  <main class="container">
-    <!-- ESPAÑOL -->
-    <section class="lang es">
-      <h1>Trabajos en Excel: Dashboards, Reportes y Automatización</h1>
-      <p>Ofrecemos servicios de <strong>trabajos en Excel personalizados</strong> para empresas, profesionales y estudiantes. Creamos archivos claros, automatizados y fáciles de usar que permiten ahorrar tiempo, reducir errores y tener un mejor control de la información.</p>
+    <div class="card">
+      <img src="automatizacion.png" alt="Automatización en Excel">
+      <h3>Automatización</h3>
+      <p>Fórmulas avanzadas, validaciones y hojas listas para trabajar sin errores.</p>
+    </div>
+  </div>
+</section>
 
-      <h2>¿Qué hacemos en Excel?</h2>
-      <p>Diseñamos dashboards, reportes automáticos y plantillas en Excel utilizando fórmulas, tablas dinámicas, validaciones y gráficos. También corregimos y optimizamos archivos existentes que presentan errores o desorden.</p>
+<section>
+  <h2>Aprende más sobre Excel</h2>
+  <p>
+    Publicamos artículos prácticos donde explicamos cómo usar Excel con criterio profesional.
+  </p>
+  <p>
+    👉 <a href="../articulos/" style="color:#0a5c66; font-weight:bold;">
+      Ver artículos sobre Excel
+    </a>
+  </p>
+</section>
 
-      <h2>Modelos de dashboards en Excel</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="dashboard_design_1.png" alt="Dashboard Excel control general">
-          <div>
-            <strong>Control general</strong>
-            <p>Ingresos, egresos y saldo mensual en una sola vista.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_2.png" alt="Dashboard Excel por categorías">
-          <div>
-            <strong>Resumen por categorías</strong>
-            <p>Identifica en qué se gasta más y optimiza recursos.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_3.png" alt="Dashboard Excel tendencias">
-          <div>
-            <strong>Tendencias mensuales</strong>
-            <p>Análisis comparativo mes a mes para tomar decisiones.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_4.png" alt="Dashboard Excel completo">
-          <div>
-            <strong>Dashboard visual completo</strong>
-            <p>Indicadores clave con gráficos claros y profesionales.</p>
-          </div>
-        </div>
-      </div>
+<footer>
+  © 2026 JHS Services SAS | Excel aplicado con criterio profesional
+</footer>
 
-      <h2>Servicios que ofrecemos</h2>
-      <ul>
-        <li>Dashboards en Excel personalizados</li>
-        <li>Automatización de hojas de cálculo</li>
-        <li>Corrección y mejora de archivos existentes</li>
-        <li>Reportes automáticos y tablas dinámicas</li>
-        <li>Plantillas para control financiero y operativo</li>
-      </ul>
+<a class="whatsapp" href="https://wa.me/573168726521" target="_blank">
+  WhatsApp
+</a>
 
-      <h2>Contacto</h2>
-      <p>¿Necesitas ayuda con un archivo en Excel? Escríbenos por WhatsApp y cuéntanos qué necesitas.</p>
-      <a class="btn btn-wa" href="https://wa.me/573168726521?text=Hola%2C%20necesito%20ayuda%20con%20un%20trabajo%20en%20Excel." target="_blank">Escribir por WhatsApp</a>
-    </section>
-
-    <!-- ENGLISH -->
-    <section class="lang en" style="display:none">
-      <h1>Excel Work: Dashboards, Reports, and Automation</h1>
-      <p>We offer <strong>custom Excel services</strong> for businesses, professionals, and students. We create clean, automated, and user-friendly spreadsheets that save time, reduce errors, and help you stay in control of your data.</p>
-
-      <h2>What we do in Excel</h2>
-      <p>We design dashboards, automated reports, and templates in Excel using formulas, pivot tables, validations, and charts. We also fix and optimize existing files that have errors or lack structure.</p>
-
-      <h2>Excel Dashboard Models</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="dashboard_design_1.png" alt="General Control Excel Dashboard">
-          <div>
-            <strong>General Control</strong>
-            <p>Income, expenses, and monthly balance in one view.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_2.png" alt="Category Breakdown Dashboard">
-          <div>
-            <strong>Category Summary</strong>
-            <p>Identify your main expenses and optimize your resources.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_3.png" alt="Monthly Trends Dashboard">
-          <div>
-            <strong>Monthly Trends</strong>
-            <p>Month-to-month comparison to support decision-making.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="dashboard_design_4.png" alt="Full Visual Dashboard">
-          <div>
-            <strong>Full Visual Dashboard</strong>
-            <p>Key indicators with clear and professional charts.</p>
-          </div>
-        </div>
-      </div>
-
-      <h2>Services We Offer</h2>
-      <ul>
-        <li>Custom Excel dashboards</li>
-        <li>Spreadsheet automation</li>
-        <li>Fixing and improving existing files</li>
-        <li>Automated reports and pivot tables</li>
-        <li>Templates for financial and operational control</li>
-      </ul>
-
-      <h2>Contact</h2>
-      <p>Need help with an Excel file? Message us on WhatsApp and tell us what you need.</p>
-      <a class="btn btn-wa" href="https://wa.me/573168726521?text=Hello%2C%20I%20need%20help%20with%20an%20Excel%20project." target="_blank">Message on WhatsApp</a>
-    </section>
-  </main>
-
-  <a class="whatsapp" href="https://wa.me/573168726521" target="_blank">WhatsApp</a>
-
-  <footer>
-    © JHS Services SAS · Excel Work
-  </footer>
-
-  <script>
-    function toggleLanguage() {
-      const langEs = document.querySelector('.lang.es');
-      const langEn = document.querySelector('.lang.en');
-      const toggle = document.querySelector('.language-toggle');
-      const flag = document.getElementById('flag');
-      const label = document.getElementById('lang-label');
-      if (langEs.style.display === 'none') {
-        langEs.style.display = 'block';
-        langEn.style.display = 'none';
-        flag.textContent = '🇬🇧';
-        label.textContent = 'English';
-      } else {
-        langEs.style.display = 'none';
-        langEn.style.display = 'block';
-        flag.textContent = '🇪🇸';
-        label.textContent = 'Español';
-      }
-    }
-  </script>
 </body>
 </html>
